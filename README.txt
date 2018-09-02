@@ -1,49 +1,23 @@
-BUILD A CHILD THEME WITH ZURB FOUNDATION
+SEMANTIQUE BASE THEME
 ----------------------------------------
 
-The base Foundation theme is designed to be easily extended by its sub-themes.
-You shouldn't modify any of the CSS or PHP files in the zurb_foundation/ folder;
-but instead you should create a sub-theme of zurb_foundation which is located in
-a folder outside of the root zurb_foundation/ folder. The examples below assume
-zurb_foundation and your sub-theme will be installed in themes/,
-but any valid theme directory is acceptable. Read the
-sites/default/default.settings.php for more info.
+This theme is a child theme designed to be forked, more than childed.
+Semantique relies on the Zurb Foundation theme as a parent.
 
-This theme does not support IE7. If you need it downgrade to Foundation 2 see
-http://foundation.zurb.com/docs/faq.php or use the script in the starter
-template.php THEMENAME_preprocess_html function.
+This theme does not support IE, and relies on css grid for layout
 
-*** IMPORTANT NOTE ***
-* After adding a new theme in Drupal 8, you'll need to clear the theme registry's
-* cache, which you can do by clearing all cache in the UI or running `drush cr` ,
-* if you have Drush installed.
 
-Automatic drush sub-theme setup
--------------------------------
-
-To create a sub-theme, simply run the Drush command `drush fst sub_theme`, where
-"sub_theme" is the desired machine name of your sub-theme. Once a sub-theme is
-created, you can enable it at /admin/appearance .
-
-Then follow step 6 below to generate the necessary Foundation files that are not
-included in the repository by default.
+After adding a new theme in Drupal 8, you'll need to clear the theme registry's cache, which you can do by clearing all cache in the UI or running `drush cr` , * if you have Drush installed.
 
 Manual sub-theme setup
 ----------------------
 
  1. Setup the location for your new sub-theme.
 
-    Copy the STARTER folder out of the zurb_foundation/ folder and rename it to
-    be your new sub-theme. IMPORTANT: The name of your sub-theme must start with
+    Clone this theme folder and rename it to the name of 
+    your new theme. IMPORTANT: The name of your sub-theme must start with
     an alphabetic character and can only contain lowercase letters, numbers and
     underscores.
-
-    For example, copy the themes/zurb_foundation/STARTER folder and
-    rename it as themes/foo.
-
-      Why? Each theme should reside in its own folder. To make it easier to
-      upgrade Foundation, sub-themes should reside in a folder separate from the
-      base theme.
 
  2. Setup the basic information for your sub-theme.
 
@@ -83,26 +57,14 @@ Manual sub-theme setup
     admin/appearance and click the "Enable and set default" link next to your
     new sub-theme.
 
- 6. This theme uses bower and npm. You will need both of those on your machine
-    as a prerequisite for developing your theme, although once in production npm
-    and bower are not necessary for general use.
-
-    Once you have ensured those are installed, run these commands at the root of
-    your sub theme:
-    - `npm install`
-    - `bower install`
-
-    Finally, run `npm start` to run the Sass compiler. or 'npm run watch' which
-    will re-run every time you save a Sass file. Press Ctrl-C to break out of
-    watching files.
 
 
 Optional steps:
 
- 7. Modify the markup in Foundation core theme's template files.
+ 7. Modify the markup in the  template files.
 
-    If you decide you want to modify any of the .html.twig template files in the
-    zurb_foundation folder, copy them to your sub-theme's folder before
+    If you decide you want to modify any of the .html.twig template files,
+    you can copy Zurb foundation templates to your theme's folder before
     making any changes.And then rebuild the theme registry.
 
     For example, copy zurb_foundation/templates/page.html.twig to
