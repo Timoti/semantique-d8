@@ -1,0 +1,58 @@
+name: semantique
+description: "Custom sub-theme, inherits from the Foundation base theme read <a href=\"http://foundation.zurb.com/docs/index.php\">framework documentation</a>"
+core: 8.x
+type: theme
+base theme: zurb_foundation
+
+# Image appears on admin/appearance
+screenshot: images/screenshot.png
+
+libraries:
+ - semantique/global
+
+# Remove assets.
+libraries-override:
+  commerce_checkout/form:
+    css:
+      theme:
+        css/commerce_checkout.form.css: false
+        
+# Regions are output in the page.html.twig
+
+regions:
+  header: Header Masthead
+  help: Help
+  hero: Hero  
+  nav_main: Navigation Main   
+  content: Content
+  sidebar_first: 'Sidebar 1'
+  sidebar_second: 'Sidebar 2'
+  footer: 'Footer - Floor'
+  left_off_canvas: 'Left off canvas'
+  right_off_canvas: 'Right off canvas'
+
+
+regions_hidden:
+  meta_header: 'Meta Header'
+  page_top: 'Page top'
+  page_bottom: 'Page bottom'
+  page_top: 'Page Top'
+  page_bottom: 'Page bottom'
+  highlighted: Highlighted
+
+# Hidden regions
+# regions_hidden[]: Page top
+# regions_hidden[]: Page bottom
+
+features:
+#- logo
+#- name
+#  - slogan
+  - favicon
+  - comment_user_picture
+  - node_user_picture
+  
+entity_print:
+ node:
+   # Adds the all-nodes library to all node PDF’s.
+   all: semantique/print-styling

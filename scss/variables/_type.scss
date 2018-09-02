@@ -1,0 +1,88 @@
+
+/*  --------------------------------------------------
+  :: TYPE
+  -------------------------------------------------- */
+
+// $font-fam-bell-gothic:'Bell Gothic W01 Light', "Lucida Grande","Lucida Sans Unicode",sans-serif;
+// $font-fam-mako: 'mMko', sans-serif;
+$font-fam-base: 'Bell Gothic W01 Bold', "Lucida Grande","Lucida Sans Unicode",sans-serif;
+// $font-fam-heading: $font-fam-base;
+$font-fam-ui: $font-fam-base;
+
+$default-text-shadow-color: rgba(black, 0.6);
+$default-text-shadow-blur: 3px;
+$default-text-shadow-v-offset: 1px;
+
+
+
+// $base-font-size: 12px;
+
+// $lineheight-default: 1.3;
+// $lineheight-content: 1.6;
+// $lineheight-feature: 1.2;
+// $lineheight-slight: 1;
+$lineheight-tight: 0.9;
+$lineheight-jammed: 0.8;
+
+// $base-line-height: 20px;
+// $base-line-height: $lineheight-default;
+// $base-font-weight: 400;
+// $fontlineheight: 1.3;
+// $letterspace-tight: 0.03em;
+// $letterspace-medium: 0.75em;
+
+
+$fontsize-small: 0.7em;
+$fontsize-base: 1em;
+// $fontsize-content: 1.4em;
+// $fontsize-feature: 1.8em;
+// $fontsize-large:2em;
+$fontsize-uppercase: 0.9em;
+
+
+// $type-giant: 4em;
+// $type-large: 2em;
+$type-blockhead: 1.6em;
+$type-content: 1.3em;
+$type-normal: 1em;
+// $type-size-sm: 0.85em;
+$type-tiny: 0.7em;
+// $type-size-nano: 0.5rem;
+
+// ----------------------------------
+
+$type-size-lvl_uber: 3.1888rem;
+$type-size-lvl_0: 2.7925rem;
+$type-size-lvl_1: 2.441rem;
+$type-size-lvl_2: 1.953rem;
+$type-size-lvl_3: 1.563rem;
+$type-size-lvl_4: 1.25rem;
+
+
+$type-size-giant: $type-size-lvl_1;
+$type-size-super: $type-size-lvl_2;
+$type-size-large: $type-size-lvl_3;
+$type-size-main: $type-size-lvl_4;
+$type-size-base: 1rem;
+$type-size-sm: 0.8rem;
+$type-size-nano: 0.5rem;
+
+$type-letterspace-tight: 0;
+$type-letterspace-base: 0.05em;
+$type-letterspace-loose: 0.15em;
+$type-letterspace-flaccid: 0.2em;
+
+// $global-gutter
+
+$type-size-feature-liquid: 2.0vw;
+$type-size-action-liquid: $type-size-feature-liquid * 1.2;
+
+@mixin secondary-type-scale {
+	font-size: $type-size-feature-liquid *0.95;
+@include breakpoint(smallish) {
+	font-size: $type-size-feature-liquid *1.0;
+}
+@include breakpoint(large) {
+	font-size: 1.3rem;
+}
+	}

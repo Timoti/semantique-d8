@@ -1,0 +1,37 @@
+
+
+
+// @import "../variables/type";
+// @import "../variables/colors";
+
+
+// codekit global framework
+// @import "utilities";
+
+
+
+
+@mixin button-action ($weight:bold, $btn-alpha: 0.3) {
+	@include col-alpha-bkg ($r: 220, $g: 220, $b: 220, $alpha: $btn-alpha, $col-hex: #f3f3f3);
+
+	border: solid $col-white-trans-5 1px;
+	display: block;
+	cursor: pointer;
+	width: 100%;
+	text-transform: uppercase;
+	text-align: center;
+	margin: 0 0 $global-gutter 0;
+	font-size: $type-size-lvl_2;
+	line-height: $lineheight-tight;
+	padding: 0.25em 1em;
+	color: $col-brand-3 * 0.75;
+	-webkit-appearance: none;
+	&:hover {
+		border: solid $col-white-off*0.85 1px;
+		@include col-alpha-bkg ($alpha: 0.6, $col-hex: #f3f3f3);
+		}
+	//@include link-undecorated; //TODO: link mixins
+	//@include link-revisited;
+	}
+
+

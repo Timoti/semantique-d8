@@ -1,0 +1,100 @@
+
+// GENERAL COLOURS
+
+$col-blue-pale  : #d9e9ef;
+$col-blue-light : #52b1ea;
+$col-blue-mid   : #077dc3;
+$col-blue-dark  : #064771;
+
+$col-orange     : #e4621c;
+$col-orange-pale: #efa47b;
+
+$col-green      : #4a993e;
+$col-green-olive: #81994D;
+$col-red        : #b33630;
+$col-yellow     : #d6c460;
+
+
+
+
+
+
+
+$col-black-pure: black;
+$col-black: #090004;
+$col-black-light: #150F11;
+$col-black-trans-1: rgba(0, 0, 0, 0.1 );
+$col-black-trans-3: rgba(0, 0, 0, 0.3 );
+$col-black-trans-5: rgba(0, 0, 0, 0.5 );
+
+$col-gray-dark: #383838;
+$col-gray-mid: #7a7a7a;
+$col-gray-light: #999999;
+$col-gray-lighter: #BBB;
+$col-gray-lighter-trans: rgba(123, 123, 123, 0.3);
+$col-gray: $col-gray-mid;
+
+$col-white: #E4E0DA;
+$col-white-off: #DDD4C9;
+
+$col-white-trans-5: rgba($col-white, 0.5 );
+$col-white-trans-3: rgba($col-white, 0.3 );
+$col-white-trans-1: rgba($col-white, 0.1 );
+
+//$alpha: 0.5;
+
+// alpha flat white
+@mixin col-alpha-bkg ($r: 255, $g: 255, $b: 255, $alpha: 0.5, $col-hex: #FFF) {
+	background-color: transparent;
+	background-color: rgba($r, $g, $b, $alpha);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#{$col-hex}',endColorstr='#{$col-hex}');
+	zoom:   1;
+	}
+
+@mixin col-alpha-col ($r: 255, $g: 255, $b: 255, $alpha: 0.5, $col-hex: #FFF) {
+	color: transparent;
+	color	: rgba($r, $g, $b, $alpha);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#{$col-hex}',endColorstr='#{$col-hex}');
+	zoom: 1;
+	}
+
+
+
+// BRAND COLOURS
+$col-brand-1: #ed1c24; // Red
+// HSB 358 88 93, rgb 237 28 36
+
+$col-brand-1-trans: rgba(237,28,36, 0.7);
+
+$col-brand-2: $col-black; // Black
+$col-brand-3: #a2bda7; // green mid muted
+
+$col-brand-2b: $col-brand-2; //really?
+$col-brand-3b: $col-brand-3; //really?
+
+$col-ui: gray;
+
+$col-action: #a22324; // dark red
+
+$col-facebook: #3C4F84;
+$col-twitter: #479ECC;
+$col-shaded-tab: $col-gray-lighter;
+
+// GUIDES
+
+// $background-grid-color: #f9f4c9;
+// $background-grid-color: rgba(222,149,122, 0.3);
+
+
+$col-guide-red: red;
+$col-guide-green: green;
+$col-guide-yellow: yellow;
+$col-guide-orange: orange;
+$col-guide-blue: blue;
+
+$col-guide-red: transparent;
+$col-guide-green: transparent;
+$col-guide-yellow: transparent;
+$col-guide-orange: transparent;
+$col-guide-blue: transparent;
+

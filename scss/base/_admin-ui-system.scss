@@ -1,0 +1,128 @@
+
+
+/* Tabs */
+
+
+
+// TODO: backport
+
+*[class*='-local-tasks'] .button-group,
+ul.tabs {
+
+	*zoom: 1;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	&::after {
+		content: "";
+		display: table;
+		clear: both;
+		}
+	li,
+	a.button {
+		float: left;
+		/* LTR */
+		margin-right: 0;
+		padding: 0;
+		&.active {
+			border-bottom: solid 3px $col-white;
+			position: relative;
+			z-index: 9;
+			margin-bottom: -2px;
+			}
+		/* LTR */
+		> a {
+			display: block;
+			padding: 0.1em;
+			}
+		}
+
+
+	a {
+		//padding: 0.5em 0.1em 0 0.1em ;
+		background-color: $col-gray-lighter;
+		text-decoration: none;
+		font-size: 1.5em;
+		line-height: 1;
+		margin-right: 0.1em;
+		text-transform: uppercase;
+		border-bottom:0;
+		
+		&:not(:last-child) {
+			border-right: solid lighten($col-gray-lighter, 10%) 2px;		
+			}
+		}
+
+	li.active a,
+	a.active {
+		background-color: $col-white;
+		border: solid $col-gray-lighter 1px;
+		border-bottom: solid $col-white 1px;
+		}
+	a:hover, 
+	a:focus {
+		background-color:$col-gray-lighter;
+		}
+
+	.admin-role & {
+		a {
+			font-size: 0.6em;
+			line-height: 0.8;
+			}
+		}
+
+	}
+
+
+*[class*='-local-tasks'] .button-group,
+ul.tabs.primary {
+	//.font-size:$fontsize-small;
+	font-size: 0.75em;
+	transition: background-color 500ms ease-in-out;
+	margin-bottom: 1em;
+	border-bottom: 1px solid #bbb;
+	a.button {
+		padding: 0.5em 0.3em 0.15em 0.3em;
+		margin: 0;
+		}
+	a.button:hover {
+		}
+	}
+
+
+
+
+ul.tabs.secondary {
+	li {
+		margin-right: 0.5em;
+		}
+	
+	a {
+		padding: 0.1em 0.2em;
+		margin: 0.4em 0;
+		//font-size: 0.9em;
+		}	
+	}
+
+
+// quick hack to un-buttonise 
+// TODO: palette management, tabs theming
+
+body:not(.path-frontpage) .block-semantique-local-tasks {
+		a.button.button {
+		background-color: inherit;
+		}
+	a.button.active {
+		color: $col-black;
+		border-bottom: solid $body-background 2px; // huh?
+		}
+
+	a.button:visited {
+		color: $col-gray-dark;
+		}
+
+}
+
+.path-frontpage .block-semantique-local-tasks {
+	margin-top: $global-padding;
+	}

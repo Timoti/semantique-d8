@@ -1,0 +1,224 @@
+/* 
+// TODO: Integrate with modules/system scsss
+.tabs {
+	.tabs--primary {
+		font-size:$fontsize-small;
+		}
+	.tabs--primary {
+		font-size: 0.75em;
+		}
+	}
+
+
+// TODO: Backport
+// NODE EDITING INDICATOR
+.path-edit .core h1 em {
+	font-size: 0.25em;
+	display: block;
+	margin-bottom: 0.5em;
+	width: auto;
+	clear:right;
+	//background-color: $col-brand-2;
+	background-color: $col-orange;
+	color: white;
+	padding: 0.25em;
+	text-transform: uppercase;
+	margin-top: 0.5em;
+	}
+
+
+
+.tabs {
+	.tabs--primary {
+		//.font-size:$fontsize-small;
+		font-size: 0.75em;
+		transition: background-color 500ms ease-in-out;
+			a:hover {
+			}
+		}
+	}
+
+
+
+.page-node-add,
+.page-node-edit {
+
+	.form-item-title input {
+		width: 100%;
+		font-size: $type-content;
+		padding: 0.2em;
+		}
+
+	.description,
+	.fieldset-description {
+		color: $col-gray-mid;
+		}
+
+
+	.field-name-field-feature-intro textarea {
+		font-size: $type-size-lvl_3;
+		}
+
+	textarea {
+		padding: 0.5em;
+		}
+
+	} //-/.page-node-edit/add
+
+
+
+
+// VERTICAL TABS
+// /////////////////////////////////
+
+// match active tab
+.vertical-tabs {
+	background-color: $col-white;
+	}
+
+.vertical-tabs-panes.vertical-tabs-processed {
+	padding: 0.5em;
+	.form-text,
+	select,
+	textarea {
+		font-size: $type-size-base;
+		padding: 0.5em;
+		}
+	}
+
+// fix stupid vertical tabs system link UI //TODO: backport
+.vertical-tabs ul.vertical-tabs-list li a {
+	&:focus strong {
+		text-decoration: none;
+		}
+	&:active strong {
+		text-decoration: none;
+		}
+	&:hover strong {
+		text-decoration: none;
+		}
+	}
+
+
+// .vertical-tabs-pane[style*="display: none;"] {
+// 	opacity:0;
+// 	transition:opacity 2s linear;
+// 	}
+// .vertical-tabs-pane[style*="display: block;"] {
+// 	opacity:1;
+// 	}
+
+//details type
+
+.vertical-tab-button .summary,
+.form-item .description {
+	font-size: $type-size-nano;
+	letter-spacing: $type-letterspace-base;
+	}
+
+
+
+
+// ADMIN MENU
+// /////////////////////////////////
+
+.toolbar,
+#admin-menu {
+	letter-spacing: $type-letterspace-tight;
+	padding-top: 0 !important;
+	margin-top: 0 !important;
+// No toolbar, admin menu off desktop.
+@media all and (max-width: 800px) {
+	display: none;
+}
+	}
+
+// omega region labels
+.region--debug::before {
+	background-image: 0;
+	background-color: rgba(138, 211, 194, 0.65);
+	}
+
+
+
+
+
+
+
+//fix ever expanding system image UI
+tr .form-item {
+	white-space: normal;
+	}
+
+.field-type-image table.sticky-enabled {
+
+	td:first-child {
+	width: 70%;
+	}
+
+	.form-type-textfield input.form-text {
+		max-width: 100% !important;
+		width: 100% ;
+		}
+
+	}
+
+
+
+
+
+
+//TODO: backport padding font size
+span.link-edit,
+span.btn-ui,
+.masquerade-switch,
+li[class*='nodequeue-toggle-'] a {
+	@include btn-basic ($col-btn-bk: lighten($col-ui, 20%) );
+	padding: 0.3em 0.25em 0.1em 0.25em;
+	font-size: 0.75em;
+	line-height: 0.8;
+	a {
+		@include link-colors(darkgreen);
+		display:inline;
+		}
+	}
+
+
+
+// Submit
+
+.file-widget.form-managed-file input,
+input.form-submit {
+	padding: 0.5em 1em;
+	font-size: 1em;
+	letter-spacing: $type-letterspace-base;
+	border-radius: 0 !important;
+	border: 0;
+	}
+
+.form-actions.form-wrapper {
+	text-align:left;
+	input {
+		display: inline;
+		text-align:center;
+		text-transform: uppercase;
+		&:not(:first-child){
+			margin-left: 0.5em;
+			}
+		}
+	}
+
+
+
+
+
+.sidebar {
+	position: relative;
+	.block-masquerade {
+		position: absolute;
+		bottom: 0;
+		}
+	}
+
+
+ */

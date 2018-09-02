@@ -1,0 +1,88 @@
+
+// .preload * {
+// 	transition: none!important;
+// 	transition:all 0s linear !important;
+// 	}
+$bdr-width: 3px;
+$bdr-col:$anchor-color;
+$bdr-style:dotted;
+
+@mixin sliding-underline-l-r-l-inverse($bdr-width: 3px, $bdr-col:$anchor-color, $bdr-style:dotted) {
+	display: inline-block;
+	position: relative;
+	padding-bottom: $bdr-width;
+
+	&:before {
+		content: '';
+		display: block;
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		height: $bdr-width;
+		width: 100%;
+		transition: width 0s ease;
+		}
+	&:after {
+		content: '';
+		display: block;
+		position: absolute;
+		right: 0;
+		bottom: 0;
+		height: $bdr-width;
+		width: 100%;
+		background: $bdr-col;
+		transition: width .5s ease;
+		}
+	&:hover:before {
+		width: 0%;
+		background: $bdr-col;
+		transition: width .5s ease;
+		}
+	&:hover:after {
+		width: 0%;
+		background: transparent;
+		transition: width 0s ease;
+		}
+	}
+
+
+@mixin sliding-underline($bdr-width: 3px, $bdr-col:$anchor-color, $bdr-style:dotted) {
+	text-decoration: none;
+	display: inline-block;
+	border-bottom: $bdr-width $bdr-style transparent;    
+	width: 0px;
+	transition: 1s ease;
+	transition-delay: 0.5s;
+	white-space: nowrap;
+	//height: 25px;
+	// border-bottom: $bdr-width dotted $anchor-color;
+	// width: 100%;
+	.page-loaded & {
+		border-bottom: $bdr-width $bdr-style $bdr-col;
+		width: 100%;
+		}	
+	&:hover {
+		border-bottom: $bdr-width $bdr-style transparent;
+		transition-delay: 2s;	
+		transition: 1s ease;
+		border-bottom: $bdr-width $bdr-style $bdr-col;		    
+		} 
+
+	}
+
+
+
+.block div:not(.block-webform) h2.title,
+.block div:not(.block-webform) h2.title:hover {
+	padding-bottom: 0.25em !important;
+	text-decoration:none;
+	@include sliding-underline;
+	&:hover {
+		} 
+	}
+
+.block div:not(.block-webform)  h2.title,
+.block div:not(.block-webform)  h2.title:hover {
+	border-bottom: $bdr-width $bdr-style $bdr-col;	   
+	}
+

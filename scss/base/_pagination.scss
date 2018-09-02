@@ -1,0 +1,60 @@
+//FROM SEVEN THEME D8
+
+
+//colors
+$col-stack: #8c8c8c;
+$col-calypso: #2a678c;
+$col-curious_blue: #3395d2;
+
+.pager__items {
+	margin: 0.25em 0 0.25em 1.5em;
+	padding: 0;
+	}
+.pager__item {
+	display: inline-block;
+	color: $col-stack;
+	font-size: 1.08em;
+	margin: 0;
+	padding: 0 0.4em;
+	a {
+		border-bottom: 2px solid transparent;
+		line-height: 1.55em;
+		padding: 0 5px 2px;
+		font-weight: 600;
+		text-decoration: none;
+		transition: border-bottom-color 0.2s;
+		&:hover {
+			border-bottom-color: $col-curious_blue;
+			color: $col-curious_blue;
+			}
+		&:focus {
+			border-bottom-color: $col-curious_blue;
+			color: $col-curious_blue;
+			}
+		}
+	&.is-active a {
+		border-bottom-width: 3px;
+		border-bottom-color: $col-calypso;
+		color: $col-calypso;
+		font-weight: 700;
+		}
+	}
+[dir="rtl"] .pager__items {
+	margin: 0.25em 1.5em 0.25em 0;
+	}
+.pager__item--next a {
+	border-bottom-width: 0;
+	color: $col-calypso;
+	}
+.pager__item--last a {
+	border-bottom-width: 0;
+	color: $col-calypso;
+	}
+.pager__item--first a {
+	border-bottom-width: 0;
+	color: $col-calypso;
+	}
+.pager__item--previous a {
+	border-bottom-width: 0;
+	color: $col-calypso;
+	}

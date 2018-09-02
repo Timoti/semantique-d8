@@ -1,0 +1,214 @@
+{#
+/**
+ * @file
+ * Zurb Foundations's theme implementation to display a single page.
+ *
+ * Available variables:
+ *
+ * General utility variables:
+ * - base_path: The base URL path of the Drupal installation. Will usually be
+ *   "/" unless you have installed Drupal in a sub-directory.
+ * - is_front: A flag indicating if the current page is the front page.
+ * - logged_in: A flag indicating if the user is registered and signed in.
+ * - is_admin: A flag indicating if the user has permission to access
+ *   administration pages.
+ *
+ * Site identity:
+ * - front_page: The URL of the front page. Use this instead of base_path when
+ *   linking to the front page. This includes the language domain or prefix.
+ * - logo: The url of the logo image, as defined in theme settings.
+ * - linked_logo: The logo image, linked to <front>.
+ * - site_name: The name of the site. This is empty when displaying the site
+ *   name has been disabled in the theme settings.
+ * - linked_site_name: The name of the site that also links to <front>.
+ * - site_slogan: The slogan of the site. This is empty when displaying the site
+ *   slogan has been disabled in theme settings.
+ * - hide_site_name: A flag indicating if the site name has been toggled off on
+ *   the theme settings page. If hidden, the "visually-hidden" class is added
+ *   to make the site name visually hidden, but still accessible.
+ * - hide_site_slogan: A flag indicating if the site slogan has been toggled off
+ *   on the theme settings page. If hidden, the "visually-hidden" class is
+ *   added to make the site slogan visually hidden, but still accessible.
+ *
+ * Page content (in order of occurrence in the default page.html.twig):
+ * - messages: Status and error messages. Should be displayed prominently.
+ * - node: Fully loaded node, if there is an automatically-loaded node
+ *   associated with the page and the node ID is the second argument in the
+ *   page's path (e.g. node/12345 and node/12345/revisions, but not
+ *   comment/reply/12345).
+ *
+ * Regions:
+ * - page.meta_header
+ * - page.header
+ * - page.help
+ * - page.hero
+ * - page.content
+ * - page.sidebar_first
+ * - page.sidebar_second
+ * - page.footer
+ *
+ * @see template_preprocess_page()
+ * @see bartik_preprocess_page()
+ * @see html.html.twig
+ */
+#}
+
+
+
+<!-- SEMANTIQUE D8 FOUNDATION BASED THEME -->
+
+
+
+
+{# HEADER #}
+
+	<header class="header-masthead" role="banner">
+			<div class="container">
+
+			<div class="branding site-branding">
+			
+			<a href="/" title="<?php print t('Site Name'); ?>" rel="home" class="site-logo">
+			
+				
+
+
+
+{# Semantic Default Logo
+
+<svg class="logo-main" viewBox="0 0 301 155" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414">
+  <path fill="none" d="M.233 0h300v155h-300z"/>
+  <clipPath id="a">
+    <path d="M.233 0h300v155h-300z"/>
+  </clipPath>
+  <g fill-rule="nonzero" clip-path="url(#a)">
+    <path d="M.33 144.144v-9.562h21.232v4.362H5.2v1.677l21.23 4.162v10.03H.33v-4.36h21.232v-2.147l-21.23-4.16zM31.11 149.747v-15.13h26.063v11.272h-4.83v-6.913H35.94v7.247l21.233 4.094v4.495l-26.062-5.066zM97.913 154.813h-4.867V144.68l-15.203 3.255v-8.99h-7.677l-4.418 15.868H60.73l5.58-20.23h16.4v7.884l15.203-3.288v15.633zM108.735 143.17v7.282h11.533v4.36h-16.363v-15.096l26.1-5.1v20.197h-4.87V140.05l-16.4 3.12zM135.247 134.616h22.43l5.616 20.197h-5.018l-4.418-15.836h-13.743v15.836h-4.867v-20.197zM175.463 138.944h-10.485v-4.362h26.062v4.362h-10.56l-4.418 15.87h-5.018l4.42-15.87zM194.597 134.616h4.868v20.198h-4.868zM239.682 154.813h-8.688l-26.1-5.1v-15.13h26.1v11.507h-4.868v-7.146h-16.363v7.28l23.104 4.463h6.815v4.126zM269.413 154.813l-22.467-.033-5.58-20.198h5.018l4.42 15.87h13.74v-15.87h4.87v20.23zM274.468 149.747v-15.13h26.062v11.272h-4.83v-6.913h-16.4v7.247l21.23 4.094v4.495l-26.062-5.066zM.54 56.04V0h270.507v25.562H25.625v9.832L299.93 59.776v58.794H.54V93.007l269.444.893V81.316L.54 56.04z"/>
+  </g>
+</svg> #}
+	 
+<svg  class="logo-main" viewBox="0 0 119 38" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414">
+  <path d="M40.212 21.124v1.778h-.765c-.335 0-.63.038-.88.112-.25.075-.497.315-.738.722.874.664 1.31 1.402 1.31 2.216 0 .908-.41 1.66-1.23 2.256-.818.596-1.902.894-3.25.894-.583 0-1.265-.088-2.044-.264-.51.217-.765.552-.765 1.006 0 .25.125.482.372.692.248.21.623.315 1.126.315h3.28c1.12 0 2 .27 2.64.81.636.537.955 1.207.955 2.006 0 .97-.483 1.772-1.448 2.41-.966.636-2.396.954-4.29.954-3.563 0-5.345-.925-5.345-2.774 0-.915.536-1.61 1.607-2.084-.685-.542-1.028-1.108-1.028-1.697 0-.895.586-1.606 1.76-2.135-1.02-.576-1.53-1.37-1.53-2.378 0-.854.374-1.582 1.125-2.186.75-.603 1.89-.904 3.42-.904.7 0 1.41.07 2.132.213.335-1.308 1.22-1.96 2.656-1.96h.93zM34.55 27.73c1.356 0 2.033-.593 2.033-1.778 0-.454-.17-.837-.508-1.15-.34-.31-.832-.467-1.48-.467-.657 0-1.165.163-1.526.488-.36.326-.542.732-.542 1.22 0 .5.18.908.536 1.22.357.31.852.467 1.486.467zm-2.732 5.062c-.357.305-.536.6-.536.884 0 .468.3.88.897 1.235.596.357 1.547.535 2.85.535 1.918 0 2.876-.458 2.876-1.372 0-.34-.168-.595-.503-.768-.335-.173-.718-.26-1.148-.26H33.61c-.502 0-1.1-.084-1.792-.253zM46.06 33.564c-1.633 0-2.88-.545-3.74-1.636-.858-1.09-1.288-2.34-1.288-3.75 0-1.518.475-2.782 1.426-3.792.95-1.01 2.206-1.514 3.765-1.514 1.48 0 2.694.49 3.645 1.474.95.982 1.427 2.26 1.427 3.83 0 1.62-.494 2.924-1.48 3.91-.99.986-2.24 1.478-3.756 1.478zm.087-1.91c1.676 0 2.514-1.162 2.514-3.487 0-1.05-.2-1.878-.6-2.485-.4-.606-1.017-.91-1.848-.91-.86 0-1.497.314-1.912.94-.416.627-.623 1.46-.623 2.496 0 1.118.22 1.972.66 2.56.442.59 1.045.886 1.81.886zM57.896 33.564c-1.632 0-2.878-.545-3.738-1.636-.86-1.09-1.29-2.34-1.29-3.75 0-1.518.476-2.782 1.427-3.792.95-1.01 2.206-1.514 3.765-1.514 1.48 0 2.694.49 3.645 1.474.95.982 1.426 2.26 1.426 3.83 0 1.62-.492 2.924-1.48 3.91-.987.986-2.238 1.478-3.754 1.478zm.088-1.91c1.675 0 2.513-1.162 2.513-3.487 0-1.05-.2-1.878-.6-2.485-.4-.606-1.017-.91-1.848-.91-.86 0-1.498.314-1.914.94-.415.627-.623 1.46-.623 2.496 0 1.118.22 1.972.662 2.56.44.59 1.044.886 1.81.886zM74.487 33.35H72.16V31.28c-.642 1.524-1.728 2.286-3.258 2.286-1.355 0-2.393-.525-3.115-1.575-.72-1.05-1.082-2.356-1.082-3.914 0-1.45.376-2.714 1.126-3.79.752-1.08 1.82-1.617 3.203-1.617 1.42 0 2.41.602 2.962 1.808v-5h2.492V33.35zm-2.492-6.057c0-.833-.213-1.482-.64-1.946-.425-.464-.977-.696-1.655-.696-.736 0-1.31.3-1.727.895-.415.596-.623 1.487-.623 2.673 0 2.29.773 3.436 2.317 3.436.612 0 1.153-.246 1.623-.737.47-.492.705-1.12.705-1.886v-1.737zM78.597 33.35H77.47V19.478h2.493v5.01c.474-.765.947-1.27 1.42-1.514.475-.243 1.028-.365 1.662-.365 1.21 0 2.212.477 3.006 1.433.795.956 1.192 2.28 1.192 3.975 0 1.53-.39 2.84-1.175 3.923-.783 1.084-1.907 1.626-3.37 1.626-1.473 0-2.617-.633-3.433-1.9l-.667 1.687zm1.366-4.38c0 .915.213 1.59.64 2.028.426.437.978.656 1.655.656.656 0 1.206-.25 1.65-.753.445-.5.682-1.482.71-2.946 0-1.07-.2-1.896-.6-2.475-.4-.58-.965-.87-1.694-.87-.685 0-1.25.247-1.694.742-.445.495-.667 1.192-.667 2.094v1.524zM97.494 23.085L93.2 34.775c-.263.717-.622 1.275-1.078 1.67-.455.397-1.098.596-1.93.596-.327 0-.804-.023-1.43-.07v-1.84l1.19.02c.525 0 .913-.08 1.165-.24.25-.158.45-.44.596-.847.145-.407.218-.644.218-.712 0-.04-.075-.25-.228-.63l-3.793-9.635h2.61l2.68 6.77 2.305-6.77h1.99zM105.845 30.078l2.25.285c-.29.928-.86 1.694-1.704 2.297-.844.603-1.904.904-3.18.904-1.53 0-2.76-.477-3.694-1.433-.932-.954-1.4-2.248-1.4-3.88 0-1.553.47-2.837 1.41-3.854.94-1.016 2.216-1.524 3.827-1.524 1.574 0 2.79.5 3.65 1.504.86 1.003 1.29 2.29 1.29 3.862l-.01.265h-7.575c0 .698.07 1.257.213 1.677.143.42.425.786.848 1.098.422.31.95.467 1.585.467 1.23 0 2.062-.556 2.492-1.667zm-.153-3.07c-.008-.738-.246-1.34-.716-1.81-.47-.466-1.05-.7-1.744-.7-.685 0-1.257.22-1.716.656-.46.437-.728 1.055-.808 1.855h4.984zM109.222 30.993l2.34-.417c.356.834 1.143 1.25 2.36 1.25 1.544 0 2.317-.423 2.317-1.27 0-.27-.122-.495-.362-.67-.24-.177-.525-.296-.852-.357l-2.012-.356c-2.23-.4-3.344-1.413-3.344-3.04 0-.907.353-1.678 1.06-2.312.707-.633 1.76-.95 3.16-.95 2.33 0 3.755.796 4.272 2.388l-2.218.417c-.234-.772-.897-1.16-1.99-1.16-1.326 0-1.99.388-1.99 1.16 0 .535.537.905 1.608 1.108l2.372.457c1.843.353 2.765 1.335 2.765 2.948 0 1.132-.475 1.977-1.422 2.536-.947.56-2.073.838-3.377.838-1.13 0-2.127-.21-2.994-.635-.867-.424-1.432-1.07-1.694-1.937zM40.212 1.036v1.78h-.765c-.335 0-.63.036-.88.11-.25.075-.497.316-.738.722.874.664 1.31 1.403 1.31 2.216 0 .908-.41 1.66-1.23 2.256-.818.597-1.902.895-3.25.895-.583 0-1.265-.088-2.044-.264-.51.217-.765.553-.765 1.007 0 .25.125.48.372.69.248.21.623.316 1.126.316h3.28c1.12 0 2 .27 2.64.808.636.54.955 1.21.955 2.01 0 .968-.483 1.77-1.448 2.407-.966.637-2.396.956-4.29.956-3.563 0-5.345-.925-5.345-2.775 0-.915.536-1.61 1.607-2.084-.685-.542-1.028-1.107-1.028-1.697 0-.894.586-1.606 1.76-2.134-1.02-.576-1.53-1.37-1.53-2.38 0-.853.374-1.58 1.125-2.184.75-.604 1.89-.906 3.42-.906.7 0 1.41.07 2.132.214.335-1.308 1.22-1.962 2.656-1.962h.93zM34.55 7.643c1.356 0 2.033-.593 2.033-1.78 0-.453-.17-.836-.508-1.148-.34-.31-.832-.467-1.48-.467-.657 0-1.165.163-1.526.488-.36.325-.542.732-.542 1.22 0 .5.18.907.536 1.22.357.31.852.467 1.486.467zm-2.732 5.06c-.357.306-.536.6-.536.886 0 .466.3.878.897 1.234.596.355 1.547.533 2.85.533 1.918 0 2.876-.457 2.876-1.372 0-.34-.168-.594-.503-.767-.335-.173-.718-.26-1.148-.26H33.61c-.502 0-1.1-.084-1.792-.254zM44.234 13.263h-2.492V2.998h2.252v2.45c.32-.956.76-1.654 1.322-2.095.56-.44 1.137-.66 1.727-.66.08 0 .19.003.328.01v2.49c-1.267 0-2.107.376-2.518 1.128-.412.754-.618 1.482-.618 2.187v4.756zM56.18 9.99l2.252.285c-.292.93-.86 1.694-1.705 2.297-.846.603-1.906.905-3.18.905-1.53 0-2.762-.478-3.695-1.433-.933-.956-1.4-2.25-1.4-3.883 0-1.55.47-2.835 1.41-3.85.94-1.018 2.216-1.526 3.826-1.526 1.574 0 2.79.502 3.65 1.505.86 1 1.29 2.29 1.29 3.86l-.01.265h-7.575c0 .698.07 1.257.213 1.677.142.42.425.786.847 1.098.423.312.95.468 1.585.468 1.232 0 2.062-.556 2.492-1.667zm-.153-3.07c-.007-.738-.246-1.34-.716-1.808-.47-.468-1.05-.7-1.742-.7-.685 0-1.257.217-1.716.654-.46.437-.73 1.056-.81 1.855h4.985zM70.345 13.263h-2.372c-.21-.623-.34-1.314-.382-2.073-.662 1.525-1.908 2.287-3.737 2.287-1.1 0-1.984-.3-2.65-.9-.667-.6-1-1.353-1-2.26 0-2.36 2.225-3.538 6.677-3.538.175 0 .412.002.71.01v-.774c0-1.063-.78-1.595-2.338-1.595-1.516 0-2.376.533-2.58 1.596l-2.12-.294c.117-.854.59-1.557 1.42-2.11.832-.552 2.034-.828 3.608-.828.852 0 1.548.066 2.087.198.54.133.995.356 1.366.67.372.316.63.66.77 1.028.143.37.214.994.214 1.875v4.635c0 .67.11 1.362.328 2.073zM67.59 8.04c-3.22 0-4.83.714-4.83 2.144 0 .427.162.79.486 1.092.324.302.814.453 1.47.453.947 0 1.663-.28 2.148-.84.484-.56.727-1.194.727-1.906V8.04zM78.116 11.454v1.81c-.743.15-1.32.223-1.727.223-.67 0-1.247-.124-1.728-.37-.48-.248-.832-.587-1.054-1.017-.223-.43-.334-1.093-.334-1.987V4.797h-1.377v-1.8h1.52l.23-2.672L75.69.152v2.846h2.218v1.8H75.69v5.01c0 .643.125 1.082.377 1.316.25.234.727.35 1.426.35.197 0 .404-.006.623-.02z" fill-rule="nonzero"/>
+  <path d="M9.69 31.977h6.783v5.408H9.69zM12.75 1.576c6.985 0 12.657 4.482 12.657 12.384S19.735 30.213 12.75 30.213C5.762 30.213.09 21.863.09 13.96c0-7.902 5.673-12.384 12.66-12.384z"/>
+</svg>
+		</a> {# /.site-logo #}
+
+	<!-- 	<div class="site-tagline">Your Tagline Here.</div> -->
+			
+			</div><!-- /branding -->
+
+	<div class="navigation secondary">		
+
+		{% if page.header %}
+							{{ page.header }}
+		{% endif %}		
+
+		{% if show_account_info %}
+			<div class="{{ site_slogan ? 'large-6' : 'large-4 columns large-offset-8' }} columns hide-for-small">
+				<p>
+					{% if logged_in %}
+						<a href="{{ path('user.page') }}">{{ 'My Account'|t }}</a>
+						<a href="{{ path('user.logout') }}">{{ 'Logout'|t }}</a>
+					{% else %}
+						<a href="{{ path('user.login') }}">{{ 'Login'|t }}</a>
+						<a href="{{ path('user.register') }}">{{ 'Sign Up'|t }}</a>
+					{% endif %}
+				</p>
+			</div>
+		{% endif %}
+
+	</div> <!-- /navigation -->
+
+	</div> <!-- /container -->
+
+	</header>
+
+{# HERO #}   
+	{% if page.hero %}
+	  <div class="hero">
+		<div class="container section">
+		  {% spaceless %}
+		  {{ page.hero }}
+		  {% endspaceless %}
+		</div><!-- /container -->
+	  </div> <!-- /hero -->
+	{% endif %}
+
+ {# NAV MAIN #}   
+
+					{% if page.nav_main %}
+	<div class="nav-main">
+		<div class="container">
+						{% if breadcrumb %} {{ breadcrumb }} {% endif %}		
+							{% spaceless %}
+								{{ page.nav_main }}
+							{% endspaceless %}
+		</div><!-- /container -->
+	</div> <!-- /nav_main -->
+					{% endif %}
+
+
+ {# CORE #}   
+
+	<div class="core page">
+		<div class="container">
+		  {% if page.help %}
+	        <div class="help">{{ page.help }}</div>
+          {% endif %}
+
+		  {% if messages and not zurb_foundation_messages_modal %}
+	        <div class="messages">
+		      {{ messages }}
+	        </div><!-- /messages -->
+		  {% endif %}		  
+ {# core-TITLE #} 
+
+  {% if not is_front %}
+        <h1 class="title">{{ page['#title'] }}</h1>
+   {% endif %}
+
+		<a id="main-content"></a>
+		<main class="content-main">
+				{{ page.content }}
+		</main><!-- /content-main-->
+
+
+
+			{% if page.sidebar_first %}
+						<div class="sidebar sidebar-first {{ sidebar_first_grid }}">
+					{{ page.sidebar_first }}
+				</div><!-- /sidebar sidebar 1 -->
+			{% endif %}
+
+			{% if page.sidebar_second %}
+						<div class="sidebar sidebar-second {{ sidebar_sec_grid }}">
+					{{ page.sidebar_second }}
+				</div><!-- /sidebar sidebar 2 -->
+			{% endif %}
+
+			</div> <!-- /-container -->
+	</div> <!-- /-core page -->
+
+
+
+
+
+ {# FOOTER #}     
+		{% if page.footer %}
+
+			<footer class="footer-floor" role="contentinfo">
+				<div class="container">
+
+					{{ page.footer }}
+
+			<div class="guff">
+			<div class="copyright">&copy; {{ "now"|date('Y') }} {{ site_name }} {{ 'All rights reserved.'|t }}</div>
+			<div class="partners">Supported by:<br> Logos & GuffHere	</div>
+			<div class="credit">Design: <a href="http://www.timgummerdesign.com" title="Tim Gummer Design">TIM GUMMER DESIGN</a>	</div>
+			</div><!-- /guff-->
+				
+
+
+					</div> <!-- /container-->
+
+			</footer><!-- /footer-floor-->
+	{% endif %}
+

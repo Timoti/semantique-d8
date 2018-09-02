@@ -1,0 +1,238 @@
+// 'dropline' Menu
+// adapted from DPM for superfish
+
+$dpm-active-pad-top: 8px;
+$dpm-active-pad-bot: 0;
+$col-tab: $col-gray-lighter *1.25;
+$menu-main-height-overall: 7.5em;
+$tab-all-pad: 0.5rem;
+$tabpad-hz: 1vw;
+
+
+// DPM MAIN MENU TODO: Magic Numbers
+$menu-main-height-default: 21px;
+$menu-main-height: 50px;
+$menu-main-block-height: 50px;
+$menu-main-main-height: $menu-main-height - 7px;
+$menu-main-region-height: $menu-main-height + 27px;
+
+$menu-main-main-link-height: $type-size-feature-liquid * 2.25;
+
+$menu-main-lifter-height: $menu-main-height + 7px;
+
+
+
+
+
+
+
+
+
+
+
+@mixin type-scale-menu-main {
+	font-size: $type-size-feature-liquid;
+	}
+
+@mixin type-scale-menu-main-sub {
+	font-size: 0.6em;
+@include breakpoint(large) {
+	font-size: $type-size-sm;
+}
+	line-height: $lineheight-jammed;
+	outline: dotted $col-guide-red 1px;
+	}
+
+// Unlike other TGD dropline DPM menu implimentations, here the dropline is set to be independent of header background graphics and so has height set for the overall menu rather than the dropline portion.
+
+
+// BASIC BREAKPOINT CHANGES
+
+// Mobile first default
+.block.block-superfish  {
+  display:none;
+  }
+
+@include breakpoint(smallish) {
+	.menu-main {
+		display:none;
+		}
+	.block.block-superfish  {
+		display:block;
+		}
+}
+
+.l-container {
+@include breakpoint(smallish) {
+	min-height: $type-size-feature-liquid * 3.25;
+	margin-bottom: $global-gutter / 2;
+	//outline: solid $col-guide-yellow 1px;
+	}
+@include breakpoint(large) {
+	//outline: solid $col-guide-green 1px;
+	}
+}
+
+
+
+
+.block.block-superfish {
+	@include type-scale-menu-main;
+	.dynamic-persistent-menu-sub-menu {
+		@include type-scale-menu-main-sub;
+		}
+	}
+
+
+// wrap long links tightly
+li.sf-menu  {
+  max-width: 18%;
+  line-height: 0.9;
+  }
+
+
+.block-superfish ul.sf-menu {
+	clear: both;
+	padding: 0;
+	//height: $menu-main-height;
+	margin: 0 0 0.25em 0;
+	.responsified & {
+		float:none;
+		width:100%;
+		background: inherit;
+		}
+	li {
+		vertical-align: middle;
+		margin-bottom: 0.25em;
+		.responsified & {
+			float:none;
+			width:100%;
+			background: inherit;
+			//@include clearfix;
+				}
+		a {
+		text-decoration:none;
+		.responsified & {
+			float:none;
+			width:100%;
+			background: inherit;
+				}
+			}
+		}
+	}
+
+ul.sf-menu  {
+	// height: $menu-main-height;
+	width:100%;
+	clear:right;
+	padding-bottom: 0.25em;
+	display: box;
+	width:100%;
+	margin-bottom: 0.25em; // nix webkit default
+	}
+
+
+.sf-menu li {
+	display: block;
+	// height: $menu-main-height;
+	width:auto !important;
+	-moz-box-flex: 1;
+	-webkit-box-flex: 1;
+	box-flex: 1;
+	float:none;
+	font-weight: bold;
+
+
+
+
+
+	a {
+		background-color: $col-tab;
+		display: block;
+
+@include breakpoint(medium) {
+		height: $menu-main-main-link-height;
+		padding-top: 0.85em; // faux v-centering
+}
+
+		padding: $dpm-active-pad-top $tabpad-hz $dpm-active-pad-bot $tabpad-hz;
+		@include type-scale-menu-main;
+
+@include breakpoint(large) {
+		height: $menu-main-main-link-height;
+		font-size: $type-size-lvl_3;
+		padding-left: 0.5rem;
+		padding-right: 0.5rem;
+		padding-top: 0.65em; // faux v-centering
+
+}
+
+@include breakpoint(xlarge) {
+		padding-top: 0.85em; // faux v-centering
+}
+
+		margin: 0;
+		width:auto !important;
+		text-align: center;
+		} //-/ a
+
+	a:first-child {
+		margin-left: 0;
+		}
+
+  }  //-/li.sf-menu -item
+
+
+
+
+li.sf-menu li ul {
+	display:block;
+	text-align: center;
+	margin-bottom: 0;
+	li {
+		display:inline;
+		}
+  a {
+		background: none;
+		margin-top: 0.1em;
+		padding: 0.15em 0.5em 0.1em 0.5em;
+		}
+
+  }
+
+
+
+// STYLE, ACTIVE, ACTIVE PATH AND HOVER STYLE
+
+/* .block-superfish {
+	a:link,
+	a:visited {
+		color:$col-gray-light;
+		text-transform: uppercase;
+		}
+  a.active,
+  a:hover {
+		color:$col-black;
+		background-color: transparent;
+		}
+	a:hover {
+		background-color: $col-gray-lighter;
+		transition: background-color 500ms ease-in-out;
+		}
+  .sf-menu  a.active {
+		border: solid $col-shaded-tab 1px;
+		border-bottom: none;
+		}
+	.dynamic-persistent-menu-sub-menu a.active {
+		padding-bottom: $dpm-active-pad-bot + 2px;
+		//border-bottom: solid 3px $col-tab;
+		}
+  }
+ */
+
+
+
+
+
+
+

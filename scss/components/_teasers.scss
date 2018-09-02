@@ -1,0 +1,183 @@
+
+
+// MEDIA OBJECTS
+// hattip: @Stubbornella
+
+.media-obj,
+.media {
+	// margin: $img-gutter; // for panelled bkgs
+	overflow: hidden;
+	_overflow: visible;
+	zoom: 1;
+	.img,
+	.media-obj-img,
+	.media-obj-date,
+	.view-id-new_front .views-row > div .views-field-filepath {
+		float: left;
+		display: block;
+		margin-right: $img-gutter;
+		img {
+			display: block;
+			}
+		}
+	.imgExt {
+		float: right;
+		margin-left: $img-gutter;
+		}
+	}
+
+.media-obj-body,
+.bd {
+	overflow: hidden;
+	_overflow: visible;
+	zoom: 1;
+	display:block;
+	span {
+		margin-right: 0.25em;
+		}
+	}
+
+
+
+
+// hacks to workaround views extra wrappage…
+.media-obj,
+.media {
+	.img,
+	.media-obj-img,
+	.views-field-filepath {
+		display: block;
+		margin-right: $img-gutter;
+		.span,
+		.span a {
+			display: inline-block;
+			}
+		}
+	}
+
+
+/* .view-id-new_front {
+	.views-field-edit-node > span.field-content {
+		display: block;
+	}
+	.views-row > div {
+		display: block;
+		}
+	}
+ */
+
+
+/* tweak thumbs for twitter */
+
+// .callout {
+// 	.field-content.teaser-thumb {
+// 		float: left;
+// 		margin: 0 $img-gutter/2 $img-gutter/2 0;
+// 		}
+// 	.views-field-created {
+// 		display: inline;
+// 		}
+// 	}
+
+
+
+.callout.twitter {
+	.media-obj {
+			margin-bottom: $global-gutter/2;
+		}
+
+	font-size: $fontsize-small;
+
+	.tweet-content {
+		margin-right: 0.25em;
+		}
+	.media-obj-img {
+		margin-right: $img-gutter/2;
+		img {
+			width: 30px;
+			height:auto;
+			}
+		}
+	}
+
+
+	/*  --------------------------------------------------
+  :: LANDING PAGE TEASERS
+  -------------------------------------------------- */
+.not-front .core .media-obj {
+	margin-bottom: $global-gutter;
+	&:last-child {
+		margin-bottom: 0;
+		}
+
+	.media-obj-img {
+		// TODO widthfix @include span(6 of 6);
+		a img{
+			width: 100% !important;
+			}
+		}
+	.media-obj-body {
+		// TODO widthfix @include span(last 6 of 6);
+		}
+	}
+
+
+
+		.page-blog .core .media-obj {
+@include breakpoint(small) {
+	.media-obj-img {
+		// TODO widthfix @include span(3 of 9);
+		}
+	.media-obj-body {
+		// TODO widthfix @include span(last 6 of 9);
+		}
+}
+
+@include breakpoint(largish) {
+	.media-obj-body {
+		font-size: $type-normal;
+		}
+}
+
+	}
+
+
+
+.page-news .core .media-obj {
+@include breakpoint(small) {
+
+	.media-obj-body {
+		// TODO widthfix @include span(last 8 of 9);
+		}
+}
+	}
+
+
+.view-landing-teasers .teaser {
+	margin-bottom: $global-gutter*2;
+	> span {
+		margin-right: 0.5em;
+		}
+
+	}
+
+
+
+
+
+
+// sidebar - short dates
+
+.aside-block-date {
+	white-space: nowrap
+	}
+
+/* .comments__form-title{
+	white-space: nowrap
+	} */
+
+
+
+
+
+

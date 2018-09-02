@@ -1,0 +1,68 @@
+@mixin forcebreak {
+	word-wrap: break-word;
+	}
+
+@mixin link-undecorated {
+	&:link, &:active, &:focus, &:visited, &:hover {
+		text-decoration: none;
+		}
+	}
+
+@mixin link-revisited {
+	&:visited {
+		color: inherit;
+		}
+	}
+
+@mixin justify {
+	text-align: justify;
+	text-justify: newspaper;
+	}
+
+// bourbon - re-articulated
+
+@mixin forcebreak {
+	word-wrap: break-word;
+	}
+
+// overflow:auto; NOT
+
+
+
+// Neat Omega Reset
+@mixin omega-reset($nth) {
+  &:nth-child(#{$nth}) { margin-right: flex-gutter($grid-columns, $gutter); }
+  &:nth-child(#{$nth}+1) { clear: none }
+}
+
+// Cherry Picked Compass mixins
+
+
+@mixin link-colors($normal, $hover: false, $active: false, $visited: false, $focus: false) {
+	color: $normal;
+	@if $visited {
+    &:visited {
+			color: $visited;
+			}
+		}
+  @if $focus {
+    &:focus {
+			color: $focus;
+			}
+		}
+  @if $hover {
+    &:hover {
+			color: $hover;
+			}
+		}
+  @if $active {
+    &:active {
+			color: $active;
+			}
+		}
+	}
+
+
+@mixin nowrap {
+  white-space: nowrap;
+	}

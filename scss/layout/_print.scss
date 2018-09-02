@@ -1,0 +1,36 @@
+
+// hide elements for print and plan pdf generation
+
+@media print { 
+ 	#main-menu,
+ .block-secondarynavigation,
+	nav,
+	.nav-main,
+	.plnr-progress-bar,
+	.core .help,
+ .footer-floor,
+ .group.action { 
+		display: none !important; 
+		} 
+
+	body > * > .container {
+		max-width: 100%;
+		}
+
+	body,
+	body .header-masthead {
+		background-color: transparent;
+	}	
+	.header-masthead,
+	.site-branding {
+		padding: 0;
+		margin: 0;
+	}
+	.section-plan .node-title {
+		margin-bottom: 2rem;
+		}
+	.logo-main {
+		transform: scale(0.5);
+		transform-origin: left;
+	}
+}

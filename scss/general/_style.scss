@@ -1,0 +1,43 @@
+
+$col-light: $col-white-off;
+$col-impact: $col-brand-2;
+$col-text-content: $col-black;
+
+
+
+body {
+	padding: 0;
+	margin: 0;
+	} 
+
+
+
+.views-field-field-author a {
+	&:link,
+	&:visited {
+		text-transform: uppercase;
+		font-size: $fontsize-uppercase;
+		color: $col-brand-2;
+		}
+	}
+
+.views-field-field-published {
+	color: $col-gray-mid;
+	}
+
+// LINKS
+a {
+	&:link,
+	&:visited {
+		text-decoration: none;
+		}
+	&:hover {
+		text-decoration: underline;
+		}
+	}
+
+
+
+
+
+

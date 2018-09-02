@@ -1,0 +1,15 @@
+{
+  "name": "type.scss",
+  "homepage": "https://github.com/tvooo/type.scss",
+  "version": "0.1.0",
+  "_release": "0.1.0",
+  "_resolution": {
+    "type": "version",
+    "tag": "0.1.0",
+    "commit": "a984d1b88a51123523b58b59883626167abc355f"
+  },
+  "_source": "git://github.com/tvooo/type.scss.git",
+  "_target": "~0.1.0",
+  "_originalSource": "type.scss",
+  "_direct": true
+}

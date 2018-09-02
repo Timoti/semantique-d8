@@ -1,0 +1,92 @@
+
+//@import: "neat";
+//  can't do that
+
+
+@mixin link-undecorated {
+	&:link, &:active, &:focus, &:visited, &:hover {
+		text-decoration: none;
+		}
+	}
+
+@mixin link-revisited {
+	&:visited {
+		color: inherit;
+		}
+	}
+
+@mixin link-colors($color) {
+	color: $color;
+	&:hover, &:active, &:focus {
+		color: lighten($color, 20%);
+		}
+	}
+
+@mixin forcebreak {
+	word-wrap: break-word;
+	}
+
+// overflow:auto; NOT
+
+
+
+
+// break links etc
+
+@mixin break-soft {
+	word-wrap: break-word;
+	}
+
+@mixin break-hard {
+	-ms-word-break: break-all;
+	// Be VERY careful with this, breaks normal words wh_erever
+	word-break: break-all;
+	// Non standard for webkit
+	word-break: break-word;
+	-webkit-hyphens: auto;
+	-moz-hyphens: auto;
+	hyphens: auto;
+	}
+
+// TERM TAG LINK STYLE (work, blog pages)
+// integrate with admin UI edit links style (DRYer)
+.tags a {
+	padding: 0.15em 0.25em 0.1em 0.25em;
+	font-size: 0.75em;
+	line-height: 0.8;
+	text-transform: uppercase;
+	background-color: $col-gray-dark;
+	&:hover {
+		background-color: $col-black;
+		}
+	color: $col-white !important;
+	@include link-revisited;
+	@include link-undecorated;
+	}
+
+
+// from abstractions...
+
+@mixin link-colors($normal, $hover: false, $active: false, $visited: false, $focus: false) {
+	//color: $normal;
+	@if $visited {
+		&:visited {
+			color: $visited;
+			}
+		}
+	@if $focus {
+		&:focus {
+			color: $focus;
+			}
+		}
+	@if $hover {
+		&:hover {
+			color: $hover;
+			}
+		}
+	@if $active {
+		&:active {
+			color: $active;
+			}
+		}
+	}

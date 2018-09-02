@@ -1,0 +1,103 @@
+
+.node footer {
+	margin-bottom: $global-gutter;
+	}
+
+	.node-links {
+		border-top: dotted $col-gray-lighter 1px;
+		padding-top: 0.5rem;
+		// for printer friendly link
+		font-size: $fontsize-small;
+		li {
+			margin: 0 0.5rem 0.5rem 0;
+			}
+		}
+		
+// .stButton span{
+// 	filter: grayscale(100%);
+// 	}
+
+	.stButton .stFb, 
+	.stButton .stTwbutton,
+	.stButton .stMainServices,
+	.sharethis .stMainServices{
+		min-height: 20px!important;
+		}
+
+	.sharethis-buttons {
+		margin-bottom: 0.5em;
+		}
+
+
+
+/*  --------------------------------------------------
+  :: USER SUBMISSION PIX & DETAILS
+  -------------------------------------------------- */
+.attribution  .submitted p {
+	display: inline;
+	margin-right: 0.5em;
+	}
+
+.node > .submitted {
+	min-height: 35px;
+	}
+
+.node .links.inline {
+	margin: 0 0 1em 0;
+	display: block;
+	text-align: right;
+	top: -0.5em;
+	}
+
+.node .user-picture img {
+	float: none;
+	margin: 0;
+	}
+
+
+.submission-details {
+  color: $col-gray;
+  margin-bottom: $global-gutter;
+	* {
+		display: inline;
+		margin-right: 1em;
+		text-transform: uppercase;
+		}
+	}
+
+
+
+.created {
+	white-space: nowrap;
+	}
+
+
+
+
+
+
+/*  --------------------------------------------------
+  :: TAXONOMIES
+  -------------------------------------------------- */
+.node .tags,
+.tags__subject{
+
+	> div {
+		display:inline;
+		}
+	width:100%;
+	//@include clearfix;
+	margin-bottom: $global-gutter*2;
+
+	a {
+		@include btn-basic ($col-btn-bk: $col-black);
+		padding: 0.15em 0.25em 0.1em 0.25em;
+		font-size: 0.75em;
+		//line-height: 0.6;
+		&:link,
+		&:visited {
+			@include link-colors($col-white);
+			@include link-undecorated;
+			}
+		}
+	}

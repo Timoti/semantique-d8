@@ -1,0 +1,53 @@
+
+
+// over-rides to provide manipulatable percentage
+$global-gutter: 2.85714%;
+// $global-gutter: 2em;
+$global-gutter: $global-gutter;
+.core {
+	img,
+	media {
+	  width: 100%;
+	  height:auto;
+		}
+	}
+
+
+.hero img,
+.captcha img,
+img.ad-banner {
+	width: 100%;
+	max-width: 100%;
+	height:auto !important;
+	}
+
+@include breakpoint(small only) {
+.node__content,
+.node-content, // this site
+.block__content span:not(.on-the-web),
+.view__content  a:not(.media-obj-img){
+	img,
+	media {
+		width: 100%;
+		height: auto;
+		display:block;
+		margin: $global-gutter 0;
+			}
+		}
+	}
+
+
+table {
+	img,
+	media {
+	  //max-width: 100px;
+		}
+	}
+	
+
+img.file-icon  {
+	max-width: 1em;
+	}
+
+
+

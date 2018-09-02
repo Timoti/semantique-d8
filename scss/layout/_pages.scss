@@ -1,0 +1,335 @@
+/*******************************************************************************
+
+Layout including callouts and responsive nav via off-canvas
+
+ ******************************************************************************/
+
+
+
+// for applying grid to multiple levels within the DOM, 
+// eg default display has .container as context, view-mode-full sets  .view-mode-full inside content-main
+
+
+
+
+
+$main-content-context: '
+	.container.section,
+	.content-main .view-mode-full';
+
+// body classes of pages with content-main inner layouts
+$main-content-inner-type: '
+	.node--type-master-package';
+
+
+html {
+	// padding: 1em;
+	// padding-top: 1em;
+	}
+	
+body {
+	margin: 0 auto;
+	//padding: 1em;
+	}
+
+
+
+// CONTAINERS
+// containing content within full width backgrounds
+
+	//.hero .post-title,
+	.container.section {
+	@include page-container(90%);
+
+@include breakpoint(xlarge) {
+	@include page-container($container-max-width);
+}
+
+	}
+
+
+
+
+	.core > .container {
+		display: block;
+		// setup for abso main-content-id 
+		position: relative;
+		// intentional top padding
+		padding-top: $global-padding;
+@include breakpoint(large) {		
+		padding-top: $global-gutter;		
+}
+		}
+
+	#main-content {
+		// take out of the grid flow to avoid incidental top padding
+		position: relative;
+		top: 0;
+		left: 50%;
+		}
+
+
+
+// GRID CONTEXTS
+
+// for .content-main and  'content-main inner' context
+	.container.section {
+
+	// TODO: solve semi-tempty help content	
+	.path-frontpage:not(.toolbar-horizontal) & {
+	 .help {
+		display: none;	
+		}
+	}
+@include breakpoint(mediumish) {
+	@include grid-context($tpl-cols:repeat(3, 1fr));
+	// default for non content (help, messages etc)	
+	> * {
+		grid-column: 1 / -1;	
+		}
+}
+
+@include breakpoint(large) {
+	@include grid-context($tpl-cols:repeat(6, 1fr));
+	// default for non content (help, messages etc)	
+	> * {
+		grid-column: 1 / -1;	
+
+		}
+}
+
+	} // /> .container
+
+
+
+
+
+
+// for .content-main and  'content-main inner' context
+	#{$main-content-inner-type} {
+
+
+@include breakpoint(medium) {
+
+
+	.view-mode-full {	
+		@include grid-context($tpl-cols:repeat(3, 1fr));
+		// default for non content (help, messages etc)	
+		> * {
+			grid-column: 1 / -1;	
+			}
+		}
+}	
+
+@include breakpoint(large) {
+
+
+
+	.view-mode-full {	
+		@include grid-context($tpl-cols:repeat(6, 1fr));
+		// default for non content (help, messages etc)	
+		> * {
+			grid-column: 1 / -1;	
+			}
+		}
+
+}
+
+	}
+
+
+
+
+
+// PAGE TYPES
+
+// #{$narrow-content}
+// #{$full-width-content}
+// #{$sidebars-one-left}
+// #{$sidebars-one-right}
+// #{$sidebars-two}
+
+
+
+
+// DEFAULT PAGE LAYOUT
+	#{$sidebars-one-left},
+	#{$sidebars-one-right} {
+
+		.core .container {
+
+@include breakpoint(medium) {	
+
+		//grid-template-columns: repeat(4, 1fr);
+
+		.content-main,
+		.content-main-inner {
+			grid-column: span 2;
+			order: -1;
+			//outline: dotted red 3px;				
+			}
+	
+		.sidebar,
+		.sidebar-inner {
+			grid-column: span 1;			
+			//outline: dotted red 3px;					
+			}
+
+
+} // /BP
+
+@include breakpoint(large) {
+		//grid-template-columns: repeat(6, 1fr);
+
+		.content-main,
+		.content-main-inner {
+			grid-column: span 4;
+			//outline: dotted red 3px;				
+			}
+	
+		.sidebar,
+		.sidebar-inner {
+			grid-column: span 2;			
+			//outline: dotted red 3px;					
+			}
+
+
+} // /BP
+
+			} // /> .core .container
+
+	} // / body
+
+
+
+
+
+
+
+
+
+
+// viewport-width backgrounds
+.hero .container,
+.hero .post-title,
+.footer-floor {
+	margin-bottom: 0;
+	}
+
+
+// contained backgrounds
+//.header-masthead,
+.core,
+//div.messages// override system.messages.css 
+//.nav-main 
+{
+		margin-bottom: $global-gutter;
+		}
+
+
+
+@include breakpoint(large) {
+
+// for very narrow sidebarless content (eg login)
+#{$very-narrow-content} {
+.core .container {
+		grid-column: 2 / span 4;	
+		}
+	
+	} // / #{$narrow-content}
+
+
+// for generally narrow sidebarless content
+#{$narrow-content} {
+.core .container {
+		grid-column: 4 / span 2;	
+		}
+	
+	} // / #{$narrow-content}
+
+
+} // /bp
+
+
+
+
+
+
+
+// GUIDE TOPIC
+// (to be moved)
+
+	.node--type-guide-topic,
+	.section-guide {
+
+		.core .container {
+
+@include breakpoint(medium) {	
+		> * {
+			grid-column: 1 / -1;			
+			}
+		.content-main {
+			grid-column: 2 / 5;
+			order: 2;	
+			.view-mode-full {
+				display: block;
+				}
+			}
+		.sidebar {
+			grid-column: 1 / 2;
+			order: 1;						
+			}
+
+} // /BP
+
+@include breakpoint(large) {
+
+		.content-main {
+			grid-column:  3 / -1;		
+			}
+		.sidebar {
+			grid-column: 1 / 2;						
+			}
+
+} // /BP
+
+			} // /> .core .container
+	} // /.body
+
+
+
+
+
+// VERTICAL SPACING
+// ////////////////////////////////////////
+// full width backgrounds
+.hero .container,
+.hero .post-title,
+.footer-floor,
+.header-masthead ~ .hero {
+	margin-bottom: 0;
+	}
+
+// contained backgrounds
+.header-masthead,
+.core,
+div.messages //override system.messages.css 
+	{
+		padding-bottom: $global-gutter;
+		}
+
+.core {
+	padding-bottom: 2 * $global-gutter;
+	margin-bottom: 0;
+	}
+
+
+// remove empty titles etc and their gutters
+.container > *:empty {
+	display: none;
+	}
+
+
+
+
+

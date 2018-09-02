@@ -1,0 +1,114 @@
+
+/*  --------------------------------------------------
+  :: BUTTONS
+  -------------------------------------------------- */
+
+// BUILDING FROM FOUNDATION BUTTON VARIABLES/MIXINS 
+// https://foundation.zurb.com/sites/docs/button.html
+// @include button-style($background, $background-hover, $color);
+
+
+@mixin btn-compact  {
+	text-transform: uppercase;
+	font-size: $small-font-size;
+	line-height: .08;
+	padding: $global-padding/1.5;
+	}	
+
+
+// @mixin btn-basic ($col-btn-bk:$col-gray, $font-size:inherit, $corner:5%) {
+// 	background-color: $col-btn-bk;
+// 	font-size: $font-size;
+// 	// font-weight: bold;
+// 	color: $col-white;
+// 	//@include link-constant-text;
+// 	padding: $global-padding;
+// 	font-family:$font-fam-ui;
+// 	text-transform: uppercase;
+// 	line-height: 0.7;
+// 	text-decoration: none;
+// 	//@include border-radius($corner);
+// 	&:hover {
+// 		color: $col-white;
+// 		background-color: $col-btn-bk *1.1;
+// 		}
+// 	}
+
+// // remove left indents on single button forms
+// .form-actions:first-child > .button {
+// 	margin-left: 0;
+// 	}	
+
+
+
+
+// ACTIONS BUTTONS
+// ///////////////////////////////////////
+// for planner forms and checkout
+
+$padding-btn-action: $global-padding/2 $global-padding;
+
+@mixin btn-action($direction:right, $padding: $padding-btn-action) {
+	font-size: inherit; 
+@include breakpoint(medium) {
+	font-size: $large-font-size; 
+}
+	padding: $padding-btn-action;
+	line-height: 100%;
+	width: 100%;
+	text-transform: uppercase;	
+	color: $col-white !important;
+	background: transparent url(../images/btn-arrowed-bidirect-bg.svg) $direction center/cover no-repeat scroll;
+	background-size: auto 100%;
+	transition: background-size 0.5 ease-in-out;
+	&:visited {
+		color:inherit;
+		}
+	&:focus {
+		outline: 0;
+		}	
+	&:hover {
+		background-color: transparent;
+		background-size: auto 120%;
+		}
+	}
+
+
+// FOUNDATION BUTTON OVERRIDES 
+	.button {
+		line-height: 1.1;
+		letter-spacing: $type-letterspace-base;
+		font-weight: bold;
+	}
+
+
+
+@mixin btn-fwd {
+	@include btn-action;
+	padding-top: $global-padding*0.75;	
+	//@include btn-arrow($col-def: $col-action, $col-hvr:$col-action-hvr);
+	}
+
+
+@mixin btn-bk {
+	@include btn-action($direction:left);
+	padding-top: $global-padding*0.75;	
+	opacity: 0.6;
+		&:hover {
+			opacity: 1;
+			}
+		//@include btn-arrow($direction:'bk', $col-def: $col-action, $col-hvr:$col-action-hvr);
+		}
+	
+
+
+.btn-fwd {
+	@include btn-fwd;
+	}
+
+.btn-bk {
+	@include btn-bk;
+	}
+
+// TODO: Consider extends instead of mixins
+

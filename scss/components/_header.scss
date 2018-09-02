@@ -1,0 +1,152 @@
+
+
+.header-masthead {
+	// override bad partials order
+	&.header-masthead {
+		padding: $global-padding 0;
+		}
+	div, nav, a {
+		//outline: dotted green 1px;
+		}
+	.container.section {
+		position: relative;
+		grid-template-columns: repeat( 12 , 1fr);
+
+		.header-masthead-nav	{
+			position: relative;
+			}
+		}
+
+	} //-/header-masthead
+
+
+
+// THE LOGO
+// /////////////////////////////////
+
+
+
+// .site-logo svg {
+// 	path {
+// 		fill: $col-brand-1;
+// 		}
+// 	.a {
+// 		fill: $col-white;
+// 		}
+// 	}
+
+
+ .site-branding {
+
+	position: relative;
+	z-index: 5;
+
+	.site-logo {
+		position: relative;
+		display: block;
+		//top: 1rem;
+@include breakpoint(small) {
+		//top: 3vw;
+}				
+@include breakpoint(medium) {
+		//top: 2vw;
+}		
+@include breakpoint(large) {
+		//top: 1.7rem;
+}	
+@include breakpoint(xlarge) {
+		//top: 1.4rem;
+}		
+		}
+
+	svg {
+		width:100%;
+		height:auto;
+	}
+	img {
+		width:100%;
+		transform-origin: top left;
+		transform: scale3d(1,1,1);
+		transition: transform 0.33s ease-in-out;
+		&:hover {
+			transform: scale3d(1.01,1.01,1);
+			}
+		}
+
+@include breakpoint(small down) {
+	margin-bottom:$global-gutter;	
+}
+
+@include breakpoint(medium) {
+	.container.section & {
+		grid-column: 1 / 4;
+	}
+}
+	
+	// larger logo on home
+	// .path-frontpage & {
+	//  scale here
+	// 	}
+	margin-bottom: 0;
+	//padding: 0.5em;
+	
+
+
+
+	} // -/.site-branding
+
+
+.site-tagline {
+	color: $col-brand-1;
+	font-size: 2.75vw;	
+	br {
+		display: none;	
+		}	
+@include breakpoint(smallish only) {
+	font-size: 3.0vw;
+}		
+@media screen and #{breakpoint(medium)} and #{breakpoint(largish down)} {
+	font-size: 1.38vw;
+	br {
+		//display: inline;	
+		}	
+}		
+
+@include breakpoint(large) {
+	font-size: 1.45vw;
+}		
+@include breakpoint(xlarge) {
+	font-size: inherit;
+}		
+
+	}
+
+
+
+
+// NAV SECONDARY
+// /////////////////////////////////
+
+ .container .navigation.secondary {
+ 	text-align: right;
+
+
+@include breakpoint(medium) {
+	grid-column: 7 / 13;	
+	// align top and bottom with logo, tagline respectively
+ 	display: flex;
+ 	flex-direction: column;
+ 	justify-content: space-between;
+	//margin-bottom:10%;	
+}
+
+
+	}
+
+
+
+
+
+
+
+

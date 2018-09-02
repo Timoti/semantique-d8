@@ -1,0 +1,57 @@
+
+a:visited {
+	color: $col-anchor;
+	}
+
+h1.title {
+	font-size: 4rem;
+	}
+
+ul.breadcrumbs {
+	@include breadcrumbs-container;
+	margin-bottom: 0;
+	padding: $global-padding 0;
+	}
+
+.top-bar-left {
+	display: none;
+	}
+
+
+// OPTIONS / CONF
+
+.group.action .button {
+	color: $col-white;
+	}
+
+
+// .btn-pay-wrap,
+// .btn-bk-wrap,
+// .field--name-field-pln-paynow-button  {
+// 	background: none !important;
+// 	}
+
+.print__wrapper--pdf {
+	display:none;
+	}
+
+// .page-403 .content-main {
+// 	color: $col-gray-dark;
+// 	}
+
+#edit-actions .button--danger {
+	display:none;
+	}
+
+
+h1, h2, h3, h4 {
+	color: $col-black;
+	.field--name-body &
+	div[class*='view-mode-'] & {
+		color: $col-black;		
+	}
+}
+
+
+
+

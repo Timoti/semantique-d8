@@ -1,0 +1,13 @@
+    {% if show_account_info %}
+      <div class="site-slogan tagline">
+        <p>
+          {% if logged_in %}
+            <a href="{{ path('user.page') }}">{{ 'My Account'|t }}</a>
+            <a href="{{ path('user.logout') }}">{{ 'Logout'|t }}</a>
+          {% else %}
+            <a href="{{ path('user.login') }}">{{ 'Login'|t }}</a>
+            <a href="{{ path('user.register') }}">{{ 'Sign Up'|t }}</a>
+          {% endif %}
+        </p>
+      </div>
+    {% endif %}

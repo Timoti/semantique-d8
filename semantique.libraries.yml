@@ -1,0 +1,50 @@
+# Add a new CSS file:
+# stylesheets:
+#   all:
+#     - layout.css
+
+# Override a CSS file:
+# stylesheets-override:
+#   - system.theme.css
+
+# Remove a CSS file:
+# stylesheets-remove:
+#   - node.css
+
+global:
+  version: 1.x
+  css:
+    base:
+      css/app.css: {}
+  js:
+    js/equalize.js: {} 
+    # js/fittext.js: {}      
+    js/app.js: {}
+    js/blend-mode.js: {}
+
+  dependencies:
+    - core/drupal
+    #   example links from outdated dox
+    # - core/jquery
+    # - core/jquery.ui.tabs
+    # - core/assets/vendor/jquery.ui/ui/core-min.js 
+    # - core/assets/vendor/jquery.ui/ui/widgets/droppable-min.js
+
+  #   css:
+  #     theme:
+  #       dialog.theme.css: false
+
+# libraries-override:
+#   contextual/drupal.contextual-links:
+#     css:
+#       component:
+#         /core/themes/stable/css/contextual/contextual.module.css: false
+
+
+    # modules/contrib/commerce/modules/cart/css/commerce_cart.layout.css 
+
+# CSS file path for PDF file.     
+print-styling:
+  css:
+    theme:
+      css/app.css: {}

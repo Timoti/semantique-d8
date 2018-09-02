@@ -1,0 +1,56 @@
+
+	iframe {
+		width: 100%;
+		height: 100%;
+		}
+	
+.reveal {
+
+	.close-button {
+		@include close-button;
+		}
+
+	&.video {
+		padding: 0;
+		background-color: transparent;
+		// relies on embed aspect ratio
+		//@include flex-video($ratio: 16 by 9);
+		iframe iframe.vp-resize-iframe {
+			border-width:0!important;
+			border-colour: transparent!important;
+			}
+		}
+
+		// enable close button visibility ouside frame
+		overflow: visible;
+		.close-button.close-button {
+			top: -3rem;
+			color: $col-white;
+			&:focus {
+				outline: none;
+				}
+			}
+
+		&:not(.video) {
+
+@include breakpoint(medium down) {
+			margin-top: 2rem;		
+			top: 150px!important;
+}
+			transform: translate(0, 2rem);	
+@include breakpoint(medium) {		
+			transform: translate(0, 0);
+	}
+
+
+		}
+
+	&:focus {
+		outline: none;
+		}
+
+	} // /,reveal
+
+
+
+

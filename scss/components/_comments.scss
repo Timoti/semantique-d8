@@ -1,0 +1,17 @@
+
+.comment-wrapper h2 {
+	margin-bottom: 2rem;
+	}
+.comment {
+figure {
+		margin: 0.5rem 0;
+		}
+	.date,
+	.date span {
+		color: $col-gray-light;
+	}
+	.links.inline {
+		margin-top: -1rem;
+		text-transform: uppercase;
+	}
+}

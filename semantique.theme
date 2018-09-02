@@ -1,0 +1,24 @@
+<?php
+
+// Add your custom theme override functions here.
+use Symfony\Component\HttpKernel\KernelEvents;
+use Drupal\Component\Utility\Html;
+use Drupal\Core\Block\BlockPluginInterface;
+
+/**
+ * Implements template_preprocess_block().
+ */
+function semantique_preprocess_block(&$variables) {
+}
+  
+/**
+ * Implements template_preprocess_field().
+ */
+function semantique_preprocess_field(&$variables, $hook) {
+}
+
+/**
+ * Implements template_preprocess_html().
+ *
+ * Adds additional classes
+ */

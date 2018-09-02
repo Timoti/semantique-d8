@@ -1,0 +1,33 @@
+
+
+.user-picture {
+	@include span(1 of 12);
+	img {
+		width: 50%;
+		}
+	}
+
+.page-user {
+	.user-picture {
+		float: none;
+		}
+	.user-profile header h2 {
+		display: none;
+		}
+	}
+
+
+
+// gutterize display studio columns 
+
+.page-user {
+
+	.group-left,
+	.group-right {
+		width:100%;
+@include breakpoint(medium) {	
+	@include gallery(3 of6);
+}	
+
+	}
+}

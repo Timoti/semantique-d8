@@ -1,0 +1,43 @@
+
+.submission-details {
+	color: $col-gray-light;
+	margin-bottom: $global-gutter;
+	* {
+		display: inline;
+		margin-right: 1em;
+		text-transform: uppercase;
+		}
+	}
+
+
+// // POST user pictures
+
+// .node .user-picture {
+// 	float: left;
+// 	margin: 0.1em $global-gutter 0 0;
+// 	}
+
+// .attribution  .user-picture {
+// 	width: $global-gutter;
+// 	height: $global-gutter;
+// 	}
+
+// .node > .user-picture img,
+// .node > .user-picture {
+// 	@include span(4 of 12); // double check was comma seperated
+// 	}
+
+// .node-type-news .submitted-by {
+// 	color: $col-gray;
+// 	}
+
+// p.submitted a:nth-of-type(2) {
+// 	display: none;
+// 	}
+
+// // UPDATES (BLOG)  PAGE
+// .page-blog.section-blog .node--blog {
+// 	margin-bottom: 3em;
+// 	}
+
+

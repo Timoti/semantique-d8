@@ -1,0 +1,113 @@
+
+.page-user- {
+
+.group-left,
+.group-right {
+	// TODO widthfix @include span(4 of 4);
+
+@include breakpoint(small) {
+	// TODO widthfix @include span(3 of 6);
+}
+	}
+
+	.field-bio-body{
+		font-size: $type-size-main;
+		margin-bottom: $global-gutter *2;
+	}
+
+
+	span, div,
+	dd {
+		color: $col-black;
+		}
+
+	.field-label,
+	dt {
+		color: $col-gray;
+		}
+
+	.group-left {
+		span, div {
+			display:block;
+			width: auto;
+			float: left;
+			}
+		.field-label {
+			clear: left;
+			margin-right: 0.5em;
+			color: $col-gray;
+			}
+		}
+
+
+	.group-right {
+		@include omega;
+		h3 {
+			display: none;
+			}
+		span, div {
+			display:block;
+			width: auto;
+			float: left;
+			}
+		.field-label {
+			clear: left;
+			margin-right: 0.5em;
+			}	
+		dt, dd {
+			display:block;
+			width: auto;
+			float: left;
+			}
+		dl {
+			clear:left;
+			}
+		dd {
+			clear: left;
+			margin-left: 0;
+			margin-right: 0.5em;
+			}	
+		}
+	} //- page-user-
+
+
+//  EDIT USER PROFILE
+
+.page-user-edit .content-main-core {
+
+	padding-top: $global-gutter *2;	
+
+	label,
+	input {
+		display: block;
+		}
+	.form-wrapper {
+		> div {
+			margin-bottom: $global-gutter *2;		
+			}
+		}
+
+	label,
+	input[type='text'],
+	input[type='password'],
+	input[type='text'],
+	textarea { 
+		display: block;	
+		font-size: $type-size-base;
+		padding: 0.2em;
+		}
+  	
+		small {
+			display: block;
+			color: $col-gray-light;
+
+
+		}
+		#edit-account small a {
+
+				display: block;
+				}
+				
+
+
+	}

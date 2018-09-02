@@ -1,0 +1,9 @@
+
+// USER EDITING PAGES
+// but scope could be wider
+
+.path-user {
+	*[class^='field--type'] {
+		margin-bottom: $global-gutter;
+	}
+}

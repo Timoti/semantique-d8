@@ -1,0 +1,17 @@
+// $ STATIC CONTENT PAGES
+// ###############################################
+
+@import "../settings"; 
+@import "abstractions"; 
+
+
+.node--type-page:not(.path-frontpage),
+.section-guide {
+// mobile first spacing
+	.content-main .field--name-body {
+	font-size: $font-size-bigbody;
+		}
+	}
+
+
+
