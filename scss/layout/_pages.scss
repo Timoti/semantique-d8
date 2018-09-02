@@ -10,9 +10,6 @@ Layout including callouts and responsive nav via off-canvas
 // eg default display has .container as context, view-mode-full sets  .view-mode-full inside content-main
 
 
-
-
-
 $main-content-context: '
 	.container.section,
 	.content-main .view-mode-full';
@@ -48,8 +45,6 @@ body {
 	}
 
 
-
-
 	.core > .container {
 		display: block;
 		// setup for abso main-content-id 
@@ -72,36 +67,46 @@ body {
 
 // GRID CONTEXTS
 
-// for .content-main and  'content-main inner' context
-	.container.section {
+// re-declared mixin to work around libsass bug
+@mixin grid-context($tpl-cols: repeat(3, 1fr)) {
+	display: grid;
+	grid-gap: $global-gutter;
+	grid-template-columns: $tpl-cols;	
+	}
 
-	// TODO: solve semi-tempty help content	
-	.path-frontpage:not(.toolbar-horizontal) & {
+
+
+
+// for .content-main and  'content-main inner' context
+	.container.section {	
+
+@include breakpoint(mediumish) {
+	@include grid-context($tpl-cols:repeat(3, 1fr));
+
+	// default for non content (help, messages etc)	
+	
+	> * {
+		grid-column: 1 / -1;	
+		.footer-floor.footer-floor & {
+			grid-column: auto;	
+			}
+		}
+
+}
+
+@include breakpoint(large) {
+	@include grid-context($tpl-cols: repeat(6, 1fr));
+}
+
+	} // / *:not(.footer-floor) .container 
+
+
+	// TODO: solve semi-empty help content	
+	.path-frontpage:not(.toolbar-horizontal) .container {
 	 .help {
 		display: none;	
 		}
 	}
-@include breakpoint(mediumish) {
-	@include grid-context($tpl-cols:repeat(3, 1fr));
-	// default for non content (help, messages etc)	
-	> * {
-		grid-column: 1 / -1;	
-		}
-}
-
-@include breakpoint(large) {
-	@include grid-context($tpl-cols:repeat(6, 1fr));
-	// default for non content (help, messages etc)	
-	> * {
-		grid-column: 1 / -1;	
-
-		}
-}
-
-	} // /> .container
-
-
-
 
 
 
@@ -254,47 +259,6 @@ body {
 
 
 
-
-
-// GUIDE TOPIC
-// (to be moved)
-
-	.node--type-guide-topic,
-	.section-guide {
-
-		.core .container {
-
-@include breakpoint(medium) {	
-		> * {
-			grid-column: 1 / -1;			
-			}
-		.content-main {
-			grid-column: 2 / 5;
-			order: 2;	
-			.view-mode-full {
-				display: block;
-				}
-			}
-		.sidebar {
-			grid-column: 1 / 2;
-			order: 1;						
-			}
-
-} // /BP
-
-@include breakpoint(large) {
-
-		.content-main {
-			grid-column:  3 / -1;		
-			}
-		.sidebar {
-			grid-column: 1 / 2;						
-			}
-
-} // /BP
-
-			} // /> .core .container
-	} // /.body
 
 
 

@@ -33,6 +33,26 @@
     
 
 
+    // $('.path-user .button-group').each(function() {
+    //     var text = $(this).text();
+    //     $(this).text(text.replace('Create new Observer Account', 'Be an Observer'));
+    //     $(this).text(text.replace('Create new Supporter Account', 'Be an Supporter'));
+    //     $(this).text(text.replace('Create new Team Member Account', 'Be a Team Member'));
+    //     $(this).text(text.replace('Create new Place Leader Account', 'Be a Place Leader'));
+    // });
+
+
+// $('.path-user .button-group a :not(:has(*))').text(function(i, v) {
+//   return v.replace(/'Create new Observer Account'/g, 'Be an Observer');    
+// });
+
+// Replace all instances of "this" or "that" with "the other".
+//$(".path-user .button-group a").replaceText( /'Create new Observer Account'/gi, 'Be an Observer' );
+
+
+
+
+
     }
   };
 

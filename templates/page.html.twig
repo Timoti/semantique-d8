@@ -88,17 +88,6 @@
 
 	</header>
 
-{# HERO #}   
-	{% if page.hero %}
-	  <div class="hero">
-		<div class="container section">
-		  {% spaceless %}
-		  {{ page.hero }}
-		  {% endspaceless %}
-		</div><!-- /container -->
-	  </div> <!-- /hero -->
-	{% endif %}
-
  {# NAV MAIN #}   
 
 					{% if page.nav_main %}
@@ -112,6 +101,16 @@
 	</div> <!-- /nav_main -->
 					{% endif %}
 
+{# HERO #}   
+	{% if page.hero %}
+	  <div class="hero">
+		<div class="container section">
+		  {% spaceless %}
+		  {{ page.hero }}
+		  {% endspaceless %}
+		</div><!-- /container -->
+	  </div> <!-- /hero -->
+	{% endif %}
 
  {# CORE #}   
 
@@ -158,8 +157,29 @@
 				</div><!-- /sidebar sidebar 2 -->
 			{% endif %}
 
+			
 			</div> <!-- /-container -->
 	</div> <!-- /-core page -->
 
 
+
+			<footer class="footer-floor" role="contentinfo">
+				<div class="container section">
+
+ {# FOOTER #}     
+		{% if page.footer %}
+					{{ page.footer }}
+
+			<div class="guff">
+			<div class="copyright">&copy; {{ "now"|date('Y') }} {{ site_name }} {{ 'All rights reserved.'|t }}</div>
+{# 			<div class="partners">Supported by:<br> Logos & GuffHere	</div> #}
+			<div class="credit">Design: <a href="http://www.timgummerdesign.com" title="Tim Gummer Design">TIM GUMMER DESIGN</a>	</div>
+			</div><!-- /guff-->
+			
+	{% endif %}
+
+
+
+					</div> <!-- /container-->
+			</footer><!-- /footer-floor-->
 <!-- hotfix test-->

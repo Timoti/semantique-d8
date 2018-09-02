@@ -100,6 +100,7 @@
 @import "system/theme"; // jquery UI
 //@import "system/dialog"; // jquery UI
 
+@import "layout/pages";
 
 
 @import "components/header";
@@ -115,6 +116,7 @@
 //@import "components/grid-tiles";
 @import "components/twitter";
 @import "components/callouts";
+@import "components/rrsmb";
 //@import "components/search";
 @import "components/user-profile";
 @import "components/user-submission-details";
@@ -122,15 +124,9 @@
 
 @import "components/static-content";
 
-@import "layout/pages";
 
 @import "general/style";
-
-
-
-
-
-@import "general/hacks";
+@import "general/pmw";
 
 @import "layout/print";
 @import "general/hacks";

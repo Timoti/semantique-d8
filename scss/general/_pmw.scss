@@ -1,0 +1,66 @@
+	
+
+	.core .button {
+		padding: 1rem;
+		text-transform: uppercase;
+		text-decoration: none;
+		color: white;
+		background-color: green;
+		&:hover {
+			background-color: lightGreen;
+			}
+		}
+
+
+@include breakpoint(medium) {
+	.card-grid.card-grid {
+		@include grid-context($tpl-cols: repeat(4, 1fr));
+		}
+	.card-grid.card-grid .column.is-half-desktop {
+		width: auto;
+		}
+
+}
+
+
+
+.node--type-landing-page div div div {
+		margin: 2rem 0;	
+	}
+
+	#block-placemaking-account-menu a {
+		display: block;
+		padding: 0.5em;
+	}
+	
+	.dialog-off-canvas-main-canvas > .footer {
+		background-color: lightGray;
+		padding-top: 1rem;
+		}	
+
+
+//  EVENT PAGE LAYOUTS
+
+.ds-3col-stacked,
+.user-form {
+
+@include breakpoint(medium) {
+	@include grid-context($tpl-cols: repeat(4, 1fr)); 
+	> * {
+		grid-column: 2 / -2;
+		}
+	.group-header {
+		grid-column: 1 / -1;
+		}
+	.group-left {
+		grid-column: 1 / 2;
+		}
+	.group-right {
+		grid-column: -2 / -1;
+		}
+
+} // /BP
+
+}		
+	
+	

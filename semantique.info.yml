@@ -11,11 +11,11 @@ libraries:
  - semantique/global
 
 # Remove assets.
-libraries-override:
-  commerce_checkout/form:
-    css:
-      theme:
-        css/commerce_checkout.form.css: false
+# libraries-override:
+#   commerce_checkout/form:
+#     css:
+#       theme:
+#         css/commerce_checkout.form.css: false
         
 # Regions are output in the page.html.twig
 
@@ -45,9 +45,9 @@ regions_hidden:
 # regions_hidden[]: Page bottom
 
 features:
-#- logo
-#- name
-#  - slogan
+# - logo
+# - name
+# - slogan
   - favicon
   - comment_user_picture
   - node_user_picture
@@ -56,4 +56,3 @@ entity_print:
  node:
    # Adds the all-nodes library to all node PDF’s.
    all: semantique/print-styling
-   

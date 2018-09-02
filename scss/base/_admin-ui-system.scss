@@ -107,9 +107,8 @@ ul.tabs.secondary {
 
 // quick hack to un-buttonise 
 // TODO: palette management, tabs theming
-
-body:not(.path-frontpage) .block-semantique-local-tasks {
-		a.button.button {
+*[class*='-local-tasks'] {
+	a.button {
 		background-color: inherit;
 		}
 	a.button.active {
@@ -121,8 +120,17 @@ body:not(.path-frontpage) .block-semantique-local-tasks {
 		color: $col-gray-dark;
 		}
 
+	.button-group a:not(.active) {
+		background-color: $col-gray-light;
+		}
+
 }
 
-.path-frontpage .block-semantique-local-tasks {
+.path-frontpage *[class*='-local-tasks'] {
 	margin-top: $global-padding;
 	}
+
+
+
+
+
