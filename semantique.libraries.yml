@@ -17,10 +17,9 @@ global:
     base:
       css/app.css: {}
   js:
-    js/equalize.js: {} 
-    # js/fittext.js: {}      
+   
     js/app.js: {}
-    js/blend-mode.js: {}
+
 
   dependencies:
     - core/drupal
