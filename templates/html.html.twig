@@ -31,6 +31,10 @@ logged_in ? 'user-logged-in',
 not root_path ? 'path-frontpage' : 'path-' ~ root_path|clean_class,
 node_type ? 'node--type-' ~ node_type|clean_class,
 db_offline ? 'db-offline',
+user.getRoles()|join(' role-'),
+page.sidebar_first ? 'sidebar-first',
+page.sidebar_second ? 'sidebar-second',
+page.sidebar_first and page.sidebar_second ? 'sidebars-both'
 ]
 %}
 <!DOCTYPE html>
@@ -51,11 +55,6 @@ db_offline ? 'db-offline',
     <css-placeholder token="{{ placeholder_token }}">
     <js-placeholder token="{{ placeholder_token }}">
       
-<script type="text/javascript">
-(function() { var s = document.createElement("script"); s.type = "text/javascript"; s.async = true; s.src = '//api.usersnap.com/load/a85ca3f4-f947-4994-9b88-bb2a8828857a.js';
-var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x); })();
-</script> 
-
 
   </head>
   <body{{ attributes.addClass(body_classes) }}>

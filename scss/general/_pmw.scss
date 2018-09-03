@@ -11,7 +11,7 @@
 			}
 		}
 
-
+// used on view and register
 @include breakpoint(medium) {
 	.card-grid.card-grid {
 		@include grid-context($tpl-cols: repeat(4, 1fr));
@@ -23,10 +23,24 @@
 }
 
 
-
-.node--type-landing-page div div div {
-		margin: 2rem 0;	
+// align CTA buttonsd on register
+.user-role-cta {
+@include breakpoint(medium) {
+	display: flex;
+	flex-direction: column;
+	p {
+		//flex-grow: 1;
+		}
+	.button {
+		display: block;
+		align-self: flex-end;
+		}	
+}
 	}
+
+	.node--type-landing-page div div div {
+		margin: 2rem 0;	
+		}
 
 	#block-placemaking-account-menu a {
 		display: block;
@@ -37,6 +51,18 @@
 		background-color: lightGray;
 		padding-top: 1rem;
 		}	
+
+
+//  ACTIVATOR DASH
+
+.content-main.content-main .block-semantique-activator-dashboard {
+	grid-column: 1 / -1;
+	border: $border-style-action;
+	padding: $global-padding;
+	}
+
+
+
 
 
 //  EVENT PAGE LAYOUTS
@@ -61,6 +87,6 @@
 
 } // /BP
 
-}		
+}		// /.ds-3col-stacked, .user-form
 	
 	

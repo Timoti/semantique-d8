@@ -11,7 +11,6 @@
 	.container.section {
 		position: relative;
 		grid-template-columns: repeat( 12 , 1fr);
-
 		.header-masthead-nav	{
 			position: relative;
 			}
@@ -136,7 +135,8 @@
 	// align top and bottom with logo, tagline respectively
  	display: flex;
  	flex-direction: column;
- 	justify-content: space-between;
+ 	//justify-content: space-between;
+  justify-content: flex-end;	
 	//margin-bottom:10%;	
 }
 

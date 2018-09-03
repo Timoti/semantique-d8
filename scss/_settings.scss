@@ -1146,10 +1146,12 @@ $sidebars-one-left: '
 	.sidebar-one-left';
 
 $sidebars-one-right: '
-	.node--type-blog';
+	.sidebar-first';
 
 $sidebars-two: '
-	.sidebars-two';
+	.sidebars-two,
+	.sidebar-first.sidebar-second,
+	.sidebars-both';
 
 
 

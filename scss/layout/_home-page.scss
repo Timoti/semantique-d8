@@ -1,0 +1,23 @@
+
+
+// for .content-main and  'content-main inner' context
+	.path-frontpage .content-main {	
+
+@include breakpoint(mediumish) {
+	@include grid-context($tpl-cols:repeat(3, 1fr));
+	// default for non content (help, messages etc)	
+	> * {
+			grid-column: auto;	
+			}
+}// /bp
+
+@include breakpoint(large) {
+	@include grid-context($tpl-cols: repeat(3, 1fr));
+}
+
+	#block-semantique-content {
+			display: none;	
+			}
+	
+	} 	// /.front-page .content-main
+

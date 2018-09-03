@@ -17,8 +17,28 @@ function semantique_preprocess_block(&$variables) {
 function semantique_preprocess_field(&$variables, $hook) {
 }
 
+
 /**
- * Implements template_preprocess_html().
- *
+
+ * Implements hook_preprocess_html().
  * Adds additional classes
  */
+
+// function YOUR_THEME_preprocess_html(&$variables) {
+
+//   // Get currently active user and his roles.
+
+//   $account = \Drupal::currentUser();
+
+//   $roles = $account->getRoles();
+
+//   // The getRoles() method will return us the machine names, so there is no need
+//   // to process roles names additionally. However, I suggest prefixing the names with "role-", so it's more obvious.
+
+//   foreach ($roles as $role) {
+
+//     $variables['attributes']['class'][] = 'role-' . $role;
+
+//   }
+
+// }

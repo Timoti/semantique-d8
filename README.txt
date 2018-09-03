@@ -1,9 +1,27 @@
 SEMANTIQUE BASE THEME
 ----------------------------------------
 
-This theme is a child theme designed to be forked, more than childed.
-Semantique relies on the Zurb Foundation theme as a parent.
+Semantique, true to it’s name, leverages sass, Zurb foundation and cssgrid to avoid presentational markup.
 
+Zurb Foundation is used to handle breakpoints, common object styles such as cards, media embeds, forms etc.
+
+The point here is to use Foundation for the things it does well, and beyond where it doesn’t. In this way we’re able to make use of CMS Foundation modules such as For Orbit Slider, and  the open Foundation Building blocks collection.   
+
+Layout is implemented using css grid, rather than a grid framework. Without a framework, extra care is required to maintain a consistent underlying  modular grid. Grids are implemented via a simple grid-context mixin
+ 
+Colours are handled via a set of sass variables prefixed “$col-“ for clear differentiation
+
+Type sizing is a work, barely in progress. We will look beyond Foundation’s somewhat arbitrary approach.
+
+The theme is workflow agnostic, but has typically been managed via code kit or equivalent preprocessing app. Common mixins are contained in a global set of ‘abstractions’, which is copied into the theme on build commits, along with autoprefixer processing.  
+
+Additional utility mixins are provided in the global abstractions for transitions, text-wrap, aspect-ratio settings etc.
+
+
+Note
+----
+This theme is a child theme designed to be forked, more than 'childed'.
+Semantique relies on the Zurb Foundation theme as a parent.
 This theme does not support IE, and relies on css grid for layout
 
 
