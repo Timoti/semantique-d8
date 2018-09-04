@@ -136,7 +136,7 @@ body {
 
 }	// /bp
 
-	}
+	}	// /~{$main-content-inner-type}
 
 
 
@@ -280,6 +280,7 @@ div.messages //override system.messages.css
 
 .core {
 	padding-bottom: 2 * $global-gutter;
+	padding-bottom: 10rem;	
 	margin-bottom: 0;
 	}
 

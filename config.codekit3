@@ -11801,36 +11801,7 @@
 		"sC": 1,
 		"tS": 0
 		},
-	"\/libraries\/bitters\/.bower.json": {
-		"ft": 524288,
-		"oA": 1,
-		"oAP": "\/libraries\/bitters\/.bower-min.json",
-		"oF": 0,
-		"oO": 0,
-		"oS": 1
-		},
-	"\/libraries\/bitters\/.gitignore": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/libraries\/bitters\/.gitignore",
-		"oF": 0
-		},
-	"\/libraries\/bitters\/.hound.yml": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/libraries\/bitters\/.hound.yml",
-		"oF": 0
-		},
-	"\/libraries\/bitters\/.scss-lint.yml": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/libraries\/bitters\/.scss-lint.yml",
-		"oF": 0
-		},
-	"\/libraries\/bitters\/app\/assets\/stylesheets\/_base.scss": {
+	"\/libraries\/_abstractions.scss": {
 		"aP": 0,
 		"bl": 0,
 		"dP": 10,
@@ -11838,434 +11809,17 @@
 		"ft": 4,
 		"ma": 1,
 		"oA": 1,
-		"oAP": "\/libraries\/bitters\/app\/assets\/stylesheets\/_base.css",
+		"oAP": "\/libraries\/_abstractions.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
 		},
-	"\/libraries\/bitters\/app\/assets\/stylesheets\/_buttons.scss": {
-		"aP": 0,
-		"bl": 0,
-		"dP": 10,
-		"dS": 0,
-		"ft": 4,
-		"ma": 1,
-		"oA": 1,
-		"oAP": "\/libraries\/bitters\/app\/assets\/stylesheets\/_buttons.css",
-		"oF": 0,
-		"oS": 0,
-		"uL": 1
-		},
-	"\/libraries\/bitters\/app\/assets\/stylesheets\/_forms.scss": {
-		"aP": 0,
-		"bl": 0,
-		"dP": 10,
-		"dS": 0,
-		"ft": 4,
-		"ma": 1,
-		"oA": 1,
-		"oAP": "\/libraries\/bitters\/app\/assets\/stylesheets\/_forms.css",
-		"oF": 0,
-		"oS": 0,
-		"uL": 1
-		},
-	"\/libraries\/bitters\/app\/assets\/stylesheets\/_grid-settings.scss": {
-		"aP": 0,
-		"bl": 0,
-		"dP": 10,
-		"dS": 0,
-		"ft": 4,
-		"ma": 1,
-		"oA": 1,
-		"oAP": "\/libraries\/bitters\/app\/assets\/stylesheets\/_grid-settings.css",
-		"oF": 0,
-		"oS": 0,
-		"uL": 1
-		},
-	"\/libraries\/bitters\/app\/assets\/stylesheets\/_lists.scss": {
-		"aP": 0,
-		"bl": 0,
-		"dP": 10,
-		"dS": 0,
-		"ft": 4,
-		"ma": 1,
-		"oA": 1,
-		"oAP": "\/libraries\/bitters\/app\/assets\/stylesheets\/_lists.css",
-		"oF": 0,
-		"oS": 0,
-		"uL": 1
-		},
-	"\/libraries\/bitters\/app\/assets\/stylesheets\/_tables.scss": {
-		"aP": 0,
-		"bl": 0,
-		"dP": 10,
-		"dS": 0,
-		"ft": 4,
-		"ma": 1,
-		"oA": 1,
-		"oAP": "\/libraries\/bitters\/app\/assets\/stylesheets\/_tables.css",
-		"oF": 0,
-		"oS": 0,
-		"uL": 1
-		},
-	"\/libraries\/bitters\/app\/assets\/stylesheets\/_typography.scss": {
-		"aP": 0,
-		"bl": 0,
-		"dP": 10,
-		"dS": 0,
-		"ft": 4,
-		"ma": 1,
-		"oA": 1,
-		"oAP": "\/libraries\/bitters\/app\/assets\/stylesheets\/_typography.css",
-		"oF": 0,
-		"oS": 0,
-		"uL": 1
-		},
-	"\/libraries\/bitters\/app\/assets\/stylesheets\/_variables.scss": {
-		"aP": 0,
-		"bl": 0,
-		"dP": 10,
-		"dS": 0,
-		"ft": 4,
-		"ma": 1,
-		"oA": 1,
-		"oAP": "\/libraries\/bitters\/app\/assets\/stylesheets\/_variables.css",
-		"oF": 0,
-		"oS": 0,
-		"uL": 1
-		},
-	"\/libraries\/bitters\/bin\/bitters": {
+	"\/libraries\/README.txt": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/libraries\/bitters\/bin\/bitters",
+		"oAP": "\/libraries\/README.txt",
 		"oF": 0
-		},
-	"\/libraries\/bitters\/bitters.gemspec": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/libraries\/bitters\/bitters.gemspec",
-		"oF": 0
-		},
-	"\/libraries\/bitters\/contrib\/index.html": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/libraries\/bitters\/contrib\/index.html",
-		"oF": 0
-		},
-	"\/libraries\/bitters\/contrib\/styles.scss": {
-		"aP": 0,
-		"bl": 0,
-		"dP": 10,
-		"dS": 0,
-		"ft": 4,
-		"ma": 1,
-		"oA": 0,
-		"oAP": "\/libraries\/bitters\/contrib\/styles.css",
-		"oF": 0,
-		"oS": 0,
-		"uL": 1
-		},
-	"\/libraries\/bitters\/CONTRIBUTING.md": {
-		"cB": 0,
-		"cS": 0,
-		"eF": 1,
-		"eL": 1,
-		"ema": 1,
-		"eSQ": 1,
-		"ft": 4096,
-		"oA": 0,
-		"oAP": "\/libraries\/bitters\/CONTRIBUTING.html",
-		"oF": 0,
-		"oFM": 0,
-		"oS": 0,
-		"pHT": 0,
-		"pME": 1,
-		"rFN": 0,
-		"uCM": 0
-		},
-	"\/libraries\/bitters\/Gemfile": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/libraries\/bitters\/Gemfile",
-		"oF": 0
-		},
-	"\/libraries\/bitters\/Gulpfile.js": {
-		"ft": 64,
-		"ma": 0,
-		"mi": 0,
-		"oA": 1,
-		"oAP": "\/libraries\/bitters\/Gulpfile-min.js",
-		"oF": 0,
-		"sC": 1,
-		"tS": 0
-		},
-	"\/libraries\/bitters\/lib\/bitters.rb": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/libraries\/bitters\/lib\/bitters.rb",
-		"oF": 0
-		},
-	"\/libraries\/bitters\/lib\/bitters\/generator.rb": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/libraries\/bitters\/lib\/bitters\/generator.rb",
-		"oF": 0
-		},
-	"\/libraries\/bitters\/lib\/bitters\/version.rb": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/libraries\/bitters\/lib\/bitters\/version.rb",
-		"oF": 0
-		},
-	"\/libraries\/bitters\/LICENSE.md": {
-		"cB": 0,
-		"cS": 0,
-		"eF": 1,
-		"eL": 1,
-		"ema": 1,
-		"eSQ": 1,
-		"ft": 4096,
-		"oA": 0,
-		"oAP": "\/libraries\/bitters\/LICENSE.html",
-		"oF": 0,
-		"oFM": 0,
-		"oS": 0,
-		"pHT": 0,
-		"pME": 1,
-		"rFN": 0,
-		"uCM": 0
-		},
-	"\/libraries\/bitters\/package.json": {
-		"ft": 524288,
-		"oA": 1,
-		"oAP": "\/libraries\/bitters\/package-min.json",
-		"oF": 0,
-		"oO": 0,
-		"oS": 1
-		},
-	"\/libraries\/bitters\/Rakefile": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/libraries\/bitters\/Rakefile",
-		"oF": 0
-		},
-	"\/libraries\/bitters\/README.md": {
-		"cB": 0,
-		"cS": 0,
-		"eF": 1,
-		"eL": 1,
-		"ema": 1,
-		"eSQ": 1,
-		"ft": 4096,
-		"oA": 0,
-		"oAP": "\/libraries\/bitters\/README.html",
-		"oF": 0,
-		"oFM": 0,
-		"oS": 0,
-		"pHT": 0,
-		"pME": 1,
-		"rFN": 0,
-		"uCM": 0
-		},
-	"\/libraries\/bitters\/sache.json": {
-		"ft": 524288,
-		"oA": 1,
-		"oAP": "\/libraries\/bitters\/sache-min.json",
-		"oF": 0,
-		"oO": 0,
-		"oS": 1
-		},
-	"\/libraries\/bitters\/spec\/bitters_spec.rb": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/libraries\/bitters\/spec\/bitters_spec.rb",
-		"oF": 0
-		},
-	"\/libraries\/bitters\/spec\/fixtures\/application.scss": {
-		"aP": 0,
-		"bl": 0,
-		"dP": 10,
-		"dS": 0,
-		"ft": 4,
-		"ma": 1,
-		"oA": 0,
-		"oAP": "\/libraries\/bitters\/spec\/fixtures\/application.css",
-		"oF": 0,
-		"oS": 0,
-		"uL": 1
-		},
-	"\/libraries\/bitters\/spec\/spec_helper.rb": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/libraries\/bitters\/spec\/spec_helper.rb",
-		"oF": 0
-		},
-	"\/libraries\/html5shiv\/.bower.json": {
-		"ft": 524288,
-		"oA": 1,
-		"oAP": "\/libraries\/html5shiv\/.bower-min.json",
-		"oF": 0,
-		"oO": 0,
-		"oS": 1
-		},
-	"\/libraries\/html5shiv\/html5shiv-printshiv.js": {
-		"ft": 64,
-		"ma": 0,
-		"mi": 0,
-		"oA": 1,
-		"oAP": "\/libraries\/html5shiv\/html5shiv-printshiv-min.js",
-		"oF": 0,
-		"sC": 1,
-		"tS": 0
-		},
-	"\/libraries\/html5shiv\/html5shiv-printshiv.min.js": {
-		"ft": 64,
-		"ma": 0,
-		"mi": 0,
-		"oA": 1,
-		"oAP": "\/libraries\/html5shiv\/html5shiv-printshiv.min-min.js",
-		"oF": 0,
-		"sC": 1,
-		"tS": 0
-		},
-	"\/libraries\/html5shiv\/html5shiv.js": {
-		"ft": 64,
-		"ma": 0,
-		"mi": 0,
-		"oA": 1,
-		"oAP": "\/libraries\/html5shiv\/html5shiv-min.js",
-		"oF": 0,
-		"sC": 1,
-		"tS": 0
-		},
-	"\/libraries\/html5shiv\/html5shiv.min.js": {
-		"ft": 64,
-		"ma": 0,
-		"mi": 0,
-		"oA": 1,
-		"oAP": "\/libraries\/html5shiv\/html5shiv.min-min.js",
-		"oF": 0,
-		"sC": 1,
-		"tS": 0
-		},
-	"\/libraries\/matchmedia\/.bower.json": {
-		"ft": 524288,
-		"oA": 1,
-		"oAP": "\/libraries\/matchmedia\/.bower-min.json",
-		"oF": 0,
-		"oO": 0,
-		"oS": 1
-		},
-	"\/libraries\/matchmedia\/matchmedia.js": {
-		"ft": 64,
-		"ma": 0,
-		"mi": 0,
-		"oA": 1,
-		"oAP": "\/libraries\/matchmedia\/matchmedia-min.js",
-		"oF": 0,
-		"sC": 1,
-		"tS": 0
-		},
-	"\/libraries\/matchmedia\/matchmedia.min.js": {
-		"ft": 64,
-		"ma": 0,
-		"mi": 0,
-		"oA": 1,
-		"oAP": "\/libraries\/matchmedia\/matchmedia.min-min.js",
-		"oF": 0,
-		"sC": 1,
-		"tS": 0
-		},
-	"\/libraries\/pie\/.bower.json": {
-		"ft": 524288,
-		"oA": 1,
-		"oAP": "\/libraries\/pie\/.bower-min.json",
-		"oF": 0,
-		"oO": 0,
-		"oS": 1
-		},
-	"\/libraries\/pie\/PIE.htc": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/libraries\/pie\/PIE.htc",
-		"oF": 0
-		},
-	"\/libraries\/pie\/PIE.js": {
-		"ft": 64,
-		"ma": 0,
-		"mi": 0,
-		"oA": 1,
-		"oAP": "\/libraries\/pie\/PIE-min.js",
-		"oF": 0,
-		"sC": 1,
-		"tS": 0
-		},
-	"\/libraries\/respond\/.bower.json": {
-		"ft": 524288,
-		"oA": 1,
-		"oAP": "\/libraries\/respond\/.bower-min.json",
-		"oF": 0,
-		"oO": 0,
-		"oS": 1
-		},
-	"\/libraries\/respond\/respond.js": {
-		"ft": 64,
-		"ma": 0,
-		"mi": 0,
-		"oA": 1,
-		"oAP": "\/libraries\/respond\/respond-min.js",
-		"oF": 0,
-		"sC": 1,
-		"tS": 0
-		},
-	"\/libraries\/respond\/respond.min.js": {
-		"ft": 64,
-		"ma": 0,
-		"mi": 0,
-		"oA": 1,
-		"oAP": "\/libraries\/respond\/respond.min-min.js",
-		"oF": 0,
-		"sC": 1,
-		"tS": 0
-		},
-	"\/libraries\/selectivizr\/.bower.json": {
-		"ft": 524288,
-		"oA": 1,
-		"oAP": "\/libraries\/selectivizr\/.bower-min.json",
-		"oF": 0,
-		"oO": 0,
-		"oS": 1
-		},
-	"\/libraries\/selectivizr\/selectivizr.js": {
-		"ft": 64,
-		"ma": 0,
-		"mi": 0,
-		"oA": 1,
-		"oAP": "\/libraries\/selectivizr\/selectivizr-min.js",
-		"oF": 0,
-		"sC": 1,
-		"tS": 0
-		},
-	"\/libraries\/selectivizr\/selectivizr.min.js": {
-		"ft": 64,
-		"ma": 0,
-		"mi": 0,
-		"oA": 1,
-		"oAP": "\/libraries\/selectivizr\/selectivizr.min-min.js",
-		"oF": 0,
-		"sC": 1,
-		"tS": 0
 		},
 	"\/libraries\/type.scss\/.bower.json": {
 		"ft": 524288,
@@ -12778,6 +12332,19 @@
 		"oAP": "\/scss\/components\/_user-submission-details",
 		"oF": 0
 		},
+	"\/scss\/components\/rrssb.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 1,
+		"oA": 0,
+		"oAP": "\/css\/components\/rrssb.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
 	"\/scss\/general\/_hacks.scss": {
 		"aP": 0,
 		"bl": 0,
@@ -12868,13 +12435,6 @@
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
-		},
-	"\/scss\/README.txt": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/scss\/README.txt",
-		"oF": 0
 		},
 	"\/scss\/system\/_dialog.scss": {
 		"aP": 0,

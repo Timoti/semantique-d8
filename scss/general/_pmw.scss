@@ -12,14 +12,17 @@
 		}
 
 // used on view and register
-@include breakpoint(medium) {
-	.card-grid.card-grid {
-		@include grid-context($tpl-cols: repeat(4, 1fr));
-		}
-	.card-grid.card-grid .column.is-half-desktop {
-		width: auto;
-		}
 
+	.card-grid.card-grid {
+@include breakpoint(small) {	
+		@include grid-context($tpl-cols: repeat(2, 1fr));
+}	
+@include breakpoint(medium) {		
+		grid-template-columns: repeat(4, 1fr);
+		&.column.is-half-desktop {
+			width: auto;
+			}
+		}
 }
 
 
@@ -29,18 +32,17 @@
 	display: flex;
 	flex-direction: column;
 	p {
-		//flex-grow: 1;
+		flex-grow: 1;
 		}
-	.button {
+	.button.button {
 		display: block;
-		align-self: flex-end;
 		}	
 }
 	}
 
-	.node--type-landing-page div div div {
-		margin: 2rem 0;	
-		}
+	// .node--type-landing-page div div div {
+	// 	margin: 2rem 0;	
+	// 	}
 
 	#block-placemaking-account-menu a {
 		display: block;
@@ -53,6 +55,7 @@
 		}	
 
 
+
 //  ACTIVATOR DASH
 
 .content-main.content-main .block-semantique-activator-dashboard {
@@ -61,11 +64,30 @@
 	padding: $global-padding;
 	}
 
+// about callout is double width for now
+.content-main > .block-aboutcallout {
+	grid-column: span 2;
+	}
 
 
+
+
+
+//  IMAGE / MAP CONTENT
+.hero.hero,
+.activation-events-map,
+.paragraph--type--image {
+	margin-bottom: $global-gutter;
+	}
 
 
 //  EVENT PAGE LAYOUTS
+
+// avoid an extra grid row - grid don't need no floaty cleariness
+.ds-3col-stacked.clearfix::before {
+	display:none;
+	}
+
 
 .ds-3col-stacked,
 .user-form {
