@@ -1,0 +1,582 @@
+
+// codekit global frameworks
+
+// @import "utilities/utilities";
+// @import "utilities/compass-pickings";
+// @import "utilities/scut";
+//@import "colours";
+
+
+// TYPOGRAPHY
+// ///////////////////////////	
+// ///////////////////////////	
+
+@mixin nowrap {
+	white-space: nowrap;
+	}
+
+@mixin word-wrap {
+	-ms-word-break: break-all;
+	word-break: break-all;
+	word-break: break-word;
+	-webkit-hyphens: auto;
+	-moz-hyphens: auto;
+	hyphens: auto;
+	}
+
+@mixin stroke-text(
+	$col-fill:currentColor, 
+	$col-stroke:currentColor,
+	$stroke-width: 2px) {
+@supports 
+  ((-webkit-text-stroke-color: $col-stroke)
+  and
+  (-webkit-text-fill-color: $col-fill))
+  or
+  ((-moz-text-stroke-color: $col-stroke)
+  and
+  (-moz-text-fill-color: $col-fill)) {
+      -moz-text-fill-color: $col-fill;
+			-webkit-text-fill-color: $col-fill;
+       -moz-text-stroke-color: $col-stroke;
+    -webkit-text-stroke-color: $col-stroke;
+       -moz-text-stroke-width: $stroke-width;  
+    -webkit-text-stroke-width: $stroke-width;
+	} // declaration
+} // /@mixin stroke-text
+
+
+
+@mixin fulljustify {
+  text-align: justify;
+	&:after {
+		content: "";
+		display: inline-block;
+		width: 100%;
+		}
+	}
+
+
+
+// SIZINGS
+// ///////////////////////////	
+// ///////////////////////////	
+
+
+// apply to parent element for full height
+// may need internal abso wrap for bkg-img placement
+@mixin full-height-col-1true {
+	// one true layout full height dynamic column
+	overflow: hidden;
+	> *	{
+		margin-bottom: -99999px !important;
+		padding-bottom: 99999px !important;
+		height: 100%;
+		}
+	}
+
+
+// precede with pos rel
+@mixin inner-abso-wrap($pad:0, $pad-h:$pad, $pad-v:$pad) {
+	position: absolute;
+	top: $pad-v;
+	bottom: $pad-v;
+	left: $pad-h;
+	right: $pad-h;
+	}
+
+@mixin sticky-footer-flex {
+	display: flex;
+	min-height: 100%;
+	flex-direction: column;
+> *:last-child {
+	flex: 1;
+		}
+	}
+
+
+// CONSTANT ASPECT RATIO
+
+// SIMPLE ELEMENT (eg images) RESONSIBITY 
+@mixin fullyfluid {
+	width: 100%;
+	height: auto;
+	} 
+
+// FOR backgrounded HERO RESPONSIVITY
+@mixin aspect-ratio($width:1, $height:1, $content-box:'.content') {
+	position: relative;
+	&:before {
+		display: block;
+		content: "";
+		width: 100%;
+		padding-top: ($height / $width) * 100%;
+	 }
+	> #{$content-box} {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		}
+	}
+
+
+// COLOUR
+// ///////////////////////////	
+// ///////////////////////////	
+
+
+// LINK COLOURS
+@mixin link-colors($normal, $hover: false, $active: false, $visited: false, $focus: false) {
+	color: $normal;
+	@if $visited {
+		&:visited {
+			color: $visited;
+			}
+		}
+	@if $focus {
+		&:focus {
+			color: $focus;
+			}
+		}
+	@if $hover {
+		&:hover {
+			color: $hover;
+			}
+		}
+	@if $active {
+		&:active {
+			color: $active;
+			}
+		}
+	}
+
+
+// REVERSE PALLETTIZING - SIMPLE- Depreciated
+// ///////////////////////////	
+
+@mixin reverse-out-color($bkg-col:$col-brand-2) {
+	background-color: $bkg-col;
+	color: $col-white;
+	select,
+	textfield,
+	input,
+	label {
+		color: inherit;
+		}
+	}		
+
+
+
+// REVERSE PALLETTIZING - FULL - Depreciated
+// ///////////////////////////	
+
+// via two mixins
+// needs selector variables (eg civicrm)
+// temporary variables to be changed out
+	// $col-white: white;
+	// $col-brand-1: orange;
+	// $col-brand-: red;	
+	// $col-black: black;
+
+
+// Coloured Background Pages for impact
+
+@mixin col-impact (
+	$col-light: $col-white,
+	$col-impact: $col-brand-1,
+	$col-text-content: $col-black
+	) {
+	background-color: $col-impact;
+	color: $col-light;
+
+	*:not(.footer-floor)
+	//:not(.l-footer) 
+	{
+		h1, h2, h3, h4, h5 {
+			color: $col-white;
+			}
+		}
+
+	//.menu,
+	.header-masthead .menu,
+	//.menu-item,
+	.title {
+		a {
+			color: $col-light;
+			}	
+		a:link,
+		a:visited,
+		a.block-title-link {
+			color: $col-light;
+			&:hover {
+				color: $col-brand-2;					
+				}
+			.title,
+			h2.title {
+				color: $col-brand-1;		
+				}					
+			}				
+
+	.content,
+	.view-content,
+	.node {
+		a {
+			color: $col-brand-2;				
+			&:hover {
+				color: lighten($col-brand-2, 10%);					
+				}
+			}		
+		}
+
+
+	.footer-floor {
+		background-color: $col-light;
+		color: $col-impact;
+		.logo-partner {
+			filter: invert(35%);
+			&:hover {
+				opacity: 0.7;	
+				}
+			}	
+			h2.title {
+				color: inherit;		
+				}		
+			}
+		}
+	} // col-impact
+
+
+// 'White' background pages for content
+
+@mixin col-content {
+	background-color: $col-light;
+	color: $col-text-content;
+	h1, h2, h3, h4, h5 {
+		color: $col-brand-1;
+		}
+	
+	.footer-floor {
+		background-color: $col-impact;
+		color: $col-light;		
+		.logo-partner {
+			filter: invert(100%);
+			}
+
+		h2.title {
+			color: $col-light;		
+			}
+		}
+	// must sort out the buttons properly	
+	.button,
+	.button:visited {
+		color: $col-light;		
+		}
+	// .menu,
+	// .header-masthead .menu,
+	// .l-header .menu,	
+	// .menu-item,
+	// .title {
+	// 	a {
+	// 		color: $col-light;
+	// 		}	
+	// 	a:link,
+	// 	a:visited,
+	// 	a.block-title-link {
+	// 		color: $col-light;
+	// 		&:hover {
+	// 			color: $col-brand-2;					
+	// 			}
+	// 		.title,
+	// 		h2.title {
+	// 			color: $col-brand-1;		
+	// 			}					
+	// 		}		
+
+
+	}
+
+
+// TINT OVERLAY
+// for images etc
+
+@mixin tintover ($bg: rgba(0,255,255, 0.5)) {	 
+	position: relative;
+	// float: left;
+	// margin-right: 20px;
+	// margin-bottom: 20px;
+	// cursor: pointer;
+	// box-shadow: rgba(0,0,0,.2) 3px 5px 5px;
+	&:before {
+		content: "";
+		display: block;
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		background: $bg;
+		transition: all .3s linear;
+		}
+	}
+
+
+	
+@mixin tintoverhover ($bg: rgba(0,255,255, 0.5), $global-trans:0.5s) {
+	@include tintover ($bg);	
+	&:before {
+		transition: opacity $global-trans ease-in-out;
+		opacity: 0;
+		}
+	&:hover:before {
+		opacity: 0.5;
+		}
+
+	}
+
+
+// reset elements for cssgrid
+@mixin unframework {
+	// yes really - 1n - to counteract frameworks' ordinal selectors
+	> *:nth-child(1n) {
+		width: auto;
+		float: none;
+		margin: 0 !important;
+		clear:none;
+		}
+	}
+
+
+
+// STRIPES
+// diagonals
+
+// @mixin gradient-stripes($col:$col-white, $angle:45deg, $width:$5px) {
+//   background: repeating-linear-gradient(
+//     45deg,
+//     transparent,
+//     transparent $width,
+//     $col $width,
+//     $col $width*2
+//   ),
+//  transparent
+// }
+
+
+
+
+// TRANSITIONS
+// ///////////////////////////
+
+
+@mixin swell ($scale-factor: 1.05){
+		transform-origin: center center;
+		transform: scale3d(1,1,1);
+		transition: transform 0.6s ease-in-out;
+	&:hover {
+		transform: scale3d($scale-factor,$scale-factor,1);
+		transition: transform 0.33s ease-in-out;		
+		}
+	}
+
+
+@mixin shuffleframes {
+@-webkit-keyframes shuffle {
+	15% {transform: translateX(5px);}
+	30% {transform: translateX(-5px);} 
+	50% {transform: translateX(3px);}
+	65% {transform: translateX(-3px);}
+	80% {;transform: translateX(2px);}
+	100% {transform: translateX(0);}
+	}
+@keyframes shuffle {
+	15% {transform: translateX(5px);}
+	30% {transform: translateX(-5px);}
+	50% {transform: translateX(3px);}
+	65% {transform: translateX(-3px);}
+	80% {transform: translateX(2px);}
+	100% {transform: translateX(0);}
+	}
+}
+// deploy on :hover or :active
+@mixin shuffle {
+	animation: shuffle 1s ease;
+	animation-iteration-count: 1;
+	}
+
+
+
+// PULSING SWELLING
+
+
+@mixin pulsing-swell {
+// https://paulund.co.uk/create-pulse-effect-with-css3-animation
+@keyframes pulse_animation {
+	0% { transform: scale(1); }
+	30% { transform: scale(1); }
+	40% { transform: scale(1.08); }
+	50% { transform: scale(1); }
+	60% { transform: scale(1); }
+	70% { transform: scale(1.05); }
+	80% { transform: scale(1); }
+	100% { transform: scale(1); }
+}
+
+
+	animation-name: pulse_animation;
+	animation-duration: 5000ms;
+	transform-origin:70% 70%;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+}
+
+
+
+// RIPPLE - STAGED ANMATIONS
+
+// for direct children
+// eg card grid
+@mixin ripple-delay ($delay: 0.2, $qty-children:16) {
+
+ @for $i from 1 through  $qty-children {
+		&:nth-child(#{$i}) {
+			animation-delay: #{$i * $delay};
+			}
+		}
+	}
+
+// for deeper level descendents
+// eg images within home callouts
+@mixin ripple-delay-targeted ($delay: 0.2, $qty-children:3, $target: widget) {
+
+ @for $i from 1 through  $qty-children {
+		&:nth-child(#{$i}) {
+			.#{$target} {
+				animation-delay: #{$i * $delay};
+				}
+			}
+		}
+
+	}
+
+
+
+// FLEXINGS	
+// ///////////////////////////
+	
+@mixin flex-center-xy($x: center) {
+	display: flex;
+	justify-content: $x;
+	align-items: center;
+	}
+
+
+// GRID HELPERS	
+// ///////////////////////////
+
+
+@mixin flex-y-parent-valign($align-items: stretch) {
+	display: flex;
+	//flex-direction: row;
+	//flex-wrap: nowrap;
+	justify-content: space-between;
+	align-content: stretch;
+	align-items: $align-items;
+	}
+
+@mixin flex-y-parent {
+	display: flex;
+	justify-content: space-between;
+	}
+	
+@mixin flex-y-parent-guttered {
+	display: flex;
+	justify-content: space-between;
+	> * {
+		margin-right: gutter();
+		}
+	> :last-child {
+		margin-right: 0;
+		}
+	}
+
+
+
+// SUSY FLEX GRID HELPERS	
+// ///////////////////////////
+
+// unhappy with both foundation 6 grids and susy 3's 'conceptually complex minimalism' Here we leverage the older susy 2 for span widths and layout context, combining it for some basic flexbox for full height cols and a foundationesque absolute (e rems-based) gutter value
+
+@mixin susyflex($gutter: $global-gutter, $cols: 12) {
+	@include layout($cols);
+	display: flex;
+	//justify-content: space-between;
+	> * {
+		margin-left: 0;
+		margin-right: $gutter;
+		&:last-child {
+			margin-right: 0;
+			}
+		}
+	}
+
+// 
+
+
+
+// CSS GRID HELPERS	
+// ///////////////////////////
+
+@mixin page-container ($max-width) {
+	max-width: $max-width;
+	margin-left: auto;
+	margin-right: auto;
+	}
+
+
+@mixin grid-context($tpl-cols: repeat(3 , 1fr), $global-gutter:2rem) {
+	display: grid;
+	grid-gap: $global-gutter;
+	grid-template-columns: $tpl-cols;	
+	}
+
+// constant aspect ratio GRID children
+// improve with https://codepen.io/cssgrid/pen/amkobw
+@mixin grid-boxing($aspect:100%) {
+> * {
+	position: relative;
+	width: 100%;
+	
+	&:before {
+		content: "";
+		height: 0;
+		display: inline-block;
+		padding-top: $aspect;
+		width: 1px;
+		position: relative;
+		}
+	}
+}
+
+
+
+
+
+
+// ZURB
+// ///////////////////////////
+// @mixin foundation-closure {
+// 	position: relative;
+// 	.close-button {
+// 		position:absolute;
+// 		top: 0;
+// 		right: $global-padding/4;
+// 		font-size: 2em;
+// 		}
+// 	}
+
+
+
+
+

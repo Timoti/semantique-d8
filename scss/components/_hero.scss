@@ -1,13 +1,25 @@
 
 @import "../settings";
 
+// should get moved to _settings
 
+$col-cta-text: $col-white;
+$col-cta-btn-text: $col-black;
+
+
+
+
+/* SNIPPETS
 
 $font-size-hero-cta-liq: 4.5vw;
 $font-size-hero-cta-static: 3.1rem;
 $font-size-hero-subtitle-liq: 1.9vw;
 $font-size-hero-subtitle-static: 1.4rem;
 
+@include stroke-text($stroke-width:1px);
+//for unsupported font weights!
+
+ */
 
 // home hero
 .hero	{
@@ -15,246 +27,54 @@ $font-size-hero-subtitle-static: 1.4rem;
 		z-index: 0;
 
 // hero bg generic
-	.path-frontpage & {
-		background-position: center bottom;
+		background-position: center center;
 		background-repeat: no-repeat;
 		background-size: cover;
 
-		// TODO: LINK COLOURS  MOVED.. see typography
-		@include col-impact();	
-		color: $col-white;		
-		@include link-bkg-dark;
-		} 
 
-
-
-
-
-
-
-
-
-	.block-hero-ogb-service-cta {
-
-	.field__item {
-		margin-bottom: $global-padding;
-@include breakpoint(xlarge) {		
-		margin-bottom: $global-padding*2;
-}
-		}
-
-	.button,
-	.co-btn-desc {
-		display: block;
-		}
-	.button {
-		// for hero CTA button's just stroke weighted, not bold
-		// we love this typeface but it's short of weights!
-		@include stroke-text($stroke-width:1px);
-		font-weight: normal;
-		padding: $global-padding/2;
-		background-color: rgba($col-white, 0.8);
-		color: $col-brand-1;
-		font-size: 1.25rem;		
-		&:hover {
-			background-color: rgba($col-white, 1)
-			} 
-		//border: solid $col-white 1px;
-		}
-
-@include breakpoint(smallish down) {
-	text-align: center;
-	div[class^="hero-callout-pathway"] {
-		.button {
-			margin: $global-gutter $global-gutter*2 $global-padding/2 $global-gutter*2;
-		}
-	}
-
-} // /BP
-
-
-//TODO: restore grid context mixin  - when that works again :(.
-@include breakpoint(mediumish) {
-
-	.button {
-		font-size: 1.25rem;
-		padding: $global-padding/2 4.1vw;
-		}
-
-	.field__item {
-		display: grid;
-		grid-gap: $global-gutter;
-		grid-template-columns: repeat(12, 1fr);
-		}
-
-	.hero-cta {
-		grid-column: 1 / -1;
-		}	
-
-	.hero-callout-service-video {
-		grid-column: 1 / 4;
-		}
-
-	.hero-callout-pathway-packages {
-		grid-column: 5 / 9;
-		}	
-
-	.hero-callout-pathway-custom {
-		grid-column: 9 / -1;
-		}	
-
-	.hero-callout-service-video {
-		display: flex;
-		flex-direction: column;
-		//align-items: flex-end;
-		justify-content: space-between;
-		}
-
-	*[class^="intro-video"] {
-		//display: block;
-		}	
-
-	.intro-video-launcher {
-			background:rgba($col-white, 0.3) url(../images/ic-media-play-fwd-wht.svg) center / contain no-repeat;
-			@include aspect-ratio($width:16, $height:5, $content-box:'.content');
-			span {
-				display: block;
-				text-indent: -9999px;		
-				}
-
-		}
-
-} // /BP
-
-
-@include breakpoint(medium) {
-
-	.button {
-		font-size: 1.45rem;
-		// force text wrap to be consistant between buttons 
-		//padding: $global-padding/2 $global-padding*2;		
-		}
-
-} // /BP
-
-
-@include breakpoint(large) {
-
-	.button {
-		font-size: 1.75rem;
-		padding: $global-padding;		
-		}
-
-} // /BP
-
-
-
-		} // /.block-hero-ogb-service-cta 
-
-
-} // home hero
-
-
-
-
-
-.hero	{ // parent selector redeclaration for manageable nesting, is all
-	.container {
-		// pos rel for abso blog titles inside hero
-		position: relative;
-
-	.path-frontpage:not(.user-logged-in) & {
-		display: flex;
-		flex-direction: column;
-		//align-items: center;
-		justify-content: space-between;
-		} //.container 
-	
-	.block-hero-ogb-service-cta {
-		display: flex;
-		flex-direction: column;
-		align-items: flex-end;
-		}
-	}
-
-		} //.hero 
-
-
-		// the actual call to action
-
-		.hero-cta {
-			padding-top: 15vw;
-			color:$white;			
-			letter-spacing: $type-letterspace-loose;
-	} // /.hero-cta
-
-
-	.block-hero-ogb-service-cta {
-
-			h2.cta-txt {
-				@include stroke-text($stroke-width:1px);
-				text-shadow: 0px 0px 30px rgba(0, 0, 0, 1);
-				font-size: $font-size-hero-cta-liq*2;
-				}	
-
-			.cta-subtitle {
-				font-size:$font-size-hero-subtitle-liq*1.8;
-				margin: -0.5rem 0 0 0;	
-				br {
-					display: none;
-					}		
-				}	
-
-			.intro-video-desc {
-				display: none;
-				}
-
-
-@include breakpoint(mediumish) {	
-		h2.cta-txt {
-			font-size: $font-size-hero-cta-liq;
-			}	
-		.cta-subtitle {
-			font-size:$font-size-hero-subtitle-liq*1.7;	
-			br {
-				display: inline;
-				}		
-			}	
-		.intro-video-desc {
+		.container {
+			// override the _page set default grid display type
 			display: block;
+			// cinematic aspect ratio for content container - it's a min-height thing
+			@include aspect-ratio($width:21, $height:9, $content-box:'*[class^="block-"]');
 			}
 
+	  // display: flex;
+	  // align-items: center;
+	  // justify-content: center;
+	  
+	 *[class^="block-"] {
 
+		margin: $global-gutter 0;
+@include breakpoint(xlarge) {		
+		margin: $global-gutter*2 0;
 }
+		}
+
+	 *[class^="cta-text-"] {
+		color: $col-white;
+		}
+
+	.button {
+		//display: block;
+		margin: 0;
+		font-weight: bold;
+		padding: $global-padding/2;
+		background-color: rgba($col-white, 0.8);
+		color: $col-cta-btn-text;
+		font-size: 1.25rem;		
+		&:hover {
+			background-color: rgba($col-white, 1);
+			} 
+		//border: solid $col-white 1px;
+		a {
+			text-decoration: none;
+			color: inherit;
+			}
+		}
 
 
-@include breakpoint(largish) {	
-		h2.cta-txt {
-			font-size: $font-size-hero-cta-liq;
-			}	
-
-		.cta-subtitle {
-			font-size:$font-size-hero-subtitle-liq;
-			br {
-				display: none;
-				}	
-			}	
-
-}
-
-@include breakpoint(xlarge) {	
-
-		h2.cta-txt {
-			font-size: $font-size-hero-cta-static;
-			}	
-
-		.cta-subtitle {
-			font-size:$font-size-hero-subtitle-static;	
-
-			}	
-}
-	
-	} // /.block-hero-ogb-service-cta
+} // /.hero
 
 
 
@@ -262,6 +82,5 @@ $font-size-hero-subtitle-static: 1.4rem;
 
 
 
-.user-logged-in .block-hero-ogb-service-cta {
-	display:none; //TODO: unHack
-	} 
+
+
