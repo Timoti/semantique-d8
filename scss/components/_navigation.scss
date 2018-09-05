@@ -37,7 +37,7 @@ ul.menu {
 		}
 
 .header-masthead  ul.menu {
-	text-align: right;
+	text-align: center;
 	padding-top: 0.5em;
 	//font-size: $type-size-lvl_4;
 	font-size: 1rem;	
@@ -53,7 +53,7 @@ ul.menu {
 		&:last-child {
 			margin-right: 0;	
 			}
-			margin-right: 0.5em;			
+			margin-right: 0.25em;			
 @include breakpoint(medium) {
 		//font-size: $type-size-lvl_3;
 		font-size: 1rem;	
@@ -131,6 +131,7 @@ $main-menu-overlay-offset-xl: 3.5rem;
 
 	 a {
 	 	color: $col-gray;
+	 	padding: 0.25rem;
 		}
 
 

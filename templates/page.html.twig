@@ -66,11 +66,13 @@
 			
 			<a href="/" rel="home" class="site-logo">
 			
-	<img src="{{ base_path ~ directory }}/images/logo-main-tagless-semantique.svg" alt="Words matter" class="logo-main" width="300" height="119" >			
+{# 	<img src="{{ base_path ~ directory }}/images/logo-main-tagless-semantique.svg" alt="Words matter" class="logo-main" width="300" height="119" >	 #}
+
+			<img src="{{ base_path ~ directory }}/images/placemaking/logo-main-midsize.svg" alt="Turning Auckland's spaces into places." class="logo-main" width="265" height="145" >		
 	
 		</a> {# /.site-logo #}
 
-	<div class="site-tagline">Words matter</div> 
+{# 	<div class="site-tagline">Words matter</div>  #}
 			
 			</div><!-- /branding -->
 
@@ -171,9 +173,9 @@
 					{{ page.footer }}
 
 			<div class="guff">
-			<div class="copyright">&copy; {{ "now"|date('Y') }} {{ site_name }} {{ 'All rights reserved.'|t }}</div>
+			<div class="copyright">&copy; {{ "now"|date('Y') }} {{ site_name }} {{ '<br>All rights reserved.'|t }}</div>
 {# 			<div class="partners">Supported by:<br> Logos & GuffHere	</div> #}
-			<div class="credit">Design: <a href="http://www.timgummerdesign.com" title="Tim Gummer Design">TIM GUMMER DESIGN</a>	</div>
+			<div class="credit">Site: <a href="http://www.timgummerdesign.com" title="Tim Gummer Design">TIM GUMMER DESIGN</a>	</div>
 			</div><!-- /guff-->
 			
 	{% endif %}

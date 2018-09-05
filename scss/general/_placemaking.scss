@@ -1,0 +1,229 @@
+
+// FOOTER
+// ///////////////////////////////////////
+
+
+	.dialog-off-canvas-main-canvas > .footer {
+		background-color: lightGray;
+		padding-top: 1rem;
+		}	
+
+
+
+// USER & REGISTER
+// ///////////////////////////////////////
+
+// FOR REGISTER
+	.core .button {
+		padding: 1rem;
+		text-transform: uppercase;
+		text-decoration: none;
+		color: white;
+		background-color: $col-brand-1;
+		&:hover {
+			background-color: lightGreen;
+			}
+		}
+
+
+	.card-grid.card-grid {
+@include breakpoint(small) {	
+		@include grid-context($tpl-cols: repeat(2, 1fr));
+}	
+@include breakpoint(medium) {		
+		grid-template-columns: repeat(4, 1fr);
+		&.column.is-half-desktop {
+			width: auto;
+			}
+		}
+}
+
+
+
+
+.card-grid.card-grid.register-paths {
+	margin: $global-gutter 0;
+	}
+// align CTA buttonsd on register
+.user-role-cta {
+	padding: $global-padding/2;
+	background-color: lighten($col-gray-light,5%);
+@include breakpoint(small) {
+	display: flex;
+	flex-direction: column;
+	p {
+		flex-grow: 1;
+		}
+	.button.button {
+		display: block;
+		margin: 0;
+		}	
+} // /bp
+
+@include breakpoint(large) {
+	padding: $global-padding;
+} // /bp
+	}
+
+	// .node--type-landing-page div div div {
+	// 	margin: 2rem 0;	
+	// 	}
+
+	#block-placemaking-account-menu a {
+		display: block;
+		padding: 0.5em;
+	}
+	
+
+//  HERO CTA
+// ///////////////////////////////////////
+ .hero {
+ 	background-color: transparent;
+
+@include breakpoint(large) {	 	
+ 	background-size: contain;
+ }
+ 	border-top: $border-heavy-dark;
+ 	border-bottom:  $border-heavy-dark;
+ 
+ 	.cta-text-main {
+ 		color: $col-brand-2;
+ 		}
+ 	.cta-text-subtitle {
+ 		color: $col-brand-2;
+ 		}
+
+} // /.hero
+
+
+	// reused for dashboard CTA as well as hero CTA
+ 	.button.btn-cta {
+ 		background-color: $col-brand-1;
+ 		color: $col-white;
+ 		&:hover {
+	 		background-color: $col-brand-1-tint; 			
+	 		}
+		 	a {	
+		    text-decoration: none;
+		    text-transform: none;
+		    color: inherit;
+		    font-size: 1.25rem;
+		    text-decoration: none;	
+	  		}
+ 		}
+
+//  ACTIVATOR DASH
+// ///////////////////////////////////////
+
+.path-frontpage .content-main > .block-activator-dashboard-2.block-activator-dashboard-2 {
+
+@include breakpoint(medium) {
+	grid-column: 1 / -1;
+
+}
+	border: $border-style-action;
+	padding: $global-padding;
+	.anonymous & { 
+		display: none;
+		}
+	}
+
+// about callout is double width for now
+.content-main > .block-aboutcallout {
+	grid-column: span 2;
+	}
+
+
+	.activator-dash-events {
+		@include grid-context($tpl-cols: repeat(3, 1fr));
+		 color: red;
+		}
+
+
+//  IMAGE / MAP CONTENT
+.hero.hero,
+.activation-events-map,
+.paragraph--type--image,
+.block-activator-dashboard-2 {
+	margin-bottom: $global-gutter;
+	}
+
+
+//  EVENT PAGE LAYOUTS
+// ///////////////////////////////////////
+
+
+// avoid an extra grid row - grid don't need no floaty cleariness
+.ds-3col-stacked.clearfix::before {
+	display:none;
+	}
+
+
+.ds-3col-stacked,
+.user-form {
+
+@include breakpoint(medium) {
+	@include grid-context($tpl-cols: repeat(4, 1fr)); 
+	> * {
+		grid-column: 2 / -2;
+		}
+	.group-header {
+		grid-column: 1 / -1;
+		}
+	.group-left {
+		grid-column: 1 / 2;
+		}
+	.group-right {
+		grid-column: -2 / -1;
+		}
+
+} // /BP
+
+}		// /.ds-3col-stacked, .user-form
+	
+
+// TYPOGRAHY - header styles
+// ///////////////////////////////////////
+
+	// foundation header-font-family not doing the business, so
+	// we will be explicit here	
+	h1, 
+	.content-main *:not(.card-grid) h2 {
+		font-family: 'Montserrat Subrayada', Montserrat, sans-serif;
+		letterspacing: 0;
+		a:hover {
+			text-decoration: none;
+			opacity: 0.7;	
+			} 
+		}
+
+
+	// revert smaller header levels to body face
+	h3, h4, h5, 
+	.card-grid.card-grid h2,
+	h2.locations-title {
+		font-family: $body-font-family;
+		}
+
+
+
+// SHARING RRSSB
+// ///////////////////////////////////////
+
+.group-right {
+	> * {
+		margin-bottom:  $global-gutter;
+	}
+@include breakpoint(medium) {		
+	.rrssb li {
+		display: block;
+		float: none;
+		margin-bottom:  $global-padding;
+		a {
+			display: block;
+			}		
+		}
+} // /bp
+	} // /.group-right 
+
+

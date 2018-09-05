@@ -104,7 +104,7 @@
 @include breakpoint(smallish only) {
 	font-size: 3.0vw;
 }		
-@media screen and #{breakpoint(medium)} and #{breakpoint(largish down)} {
+@media screen and #{breakpoint(medium)} and #{breakpoint(largeish down)} {
 	font-size: 1.38vw;
 	br {
 		//display: inline;	

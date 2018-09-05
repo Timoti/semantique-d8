@@ -61,16 +61,13 @@ $col-white-trans-1: rgba($col-white, 0.1 );
 
 
 // BRAND COLOURS
-$col-brand-1: #ed1c24; // Red
-// HSB 358 88 93, rgb 237 28 36
+// $col-brand-1: #ed1c24; // Red
+// $col-brand-1-trans: rgba(237,28,36, 0.7);
+// $col-brand-2: $col-black; // Black
+// $col-brand-3: #a2bda7; // green mid muted
 
-$col-brand-1-trans: rgba(237,28,36, 0.7);
-
-$col-brand-2: $col-black; // Black
-$col-brand-3: #a2bda7; // green mid muted
-
-$col-brand-2b: $col-brand-2; //really?
-$col-brand-3b: $col-brand-3; //really?
+// $col-brand-2b: $col-brand-2; //really?
+// $col-brand-3b: $col-brand-3; //really?
 
 $col-ui: gray;
 

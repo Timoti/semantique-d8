@@ -133,7 +133,7 @@
 		}
 }
 
-@include breakpoint(largish) {
+@include breakpoint(largeish) {
 	.media-obj-body {
 		font-size: $type-normal;
 		}

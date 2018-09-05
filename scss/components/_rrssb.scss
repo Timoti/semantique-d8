@@ -49,9 +49,9 @@ $social-list: (rrssb-email $rrssb-email, rrssb-facebook $rrssb-facebook, rrssb-t
 
 // fade-in animation so it doesnt blink
 @keyframes fade-in {
-  0% { opacity: 0; }
-  100% { opacity: 1;}
-}
+  0% { opacity: 0;  }
+  100% { opacity: 1;  }
+  }
 
 // The meat and potatoes
 .rrssb-buttons {
@@ -72,13 +72,13 @@ $social-list: (rrssb-email $rrssb-email, rrssb-facebook $rrssb-facebook, rrssb-t
   // clearfix buttons for large-format
   &:after {
     clear: both;
-  }
+    }
 
   &:before,
   &:after {
     content: ' ';
     display: table;
-  }
+    }
 
   li {
     box-sizing: border-box;
@@ -91,16 +91,16 @@ $social-list: (rrssb-email $rrssb-email, rrssb-facebook $rrssb-facebook, rrssb-t
 
     // This generates individual button classes for each item in social list on line 39.
     @each $s-name in $social-list {
-      &.#{nth($s-name, 1)} {
+      &.#{nth($s-name, 1) } {
         a {
           background-color: nth($s-name, 2);
 
           &:hover {
             background-color: darken(nth($s-name, 2), 10%);
+            }
           }
         }
       }
-    }
     // end @each directive
 
     a {
@@ -134,18 +134,18 @@ $social-list: (rrssb-email $rrssb-email, rrssb-facebook $rrssb-facebook, rrssb-t
 
           path, circle {
             fill: $rrssb-txt;
+            }
           }
         }
-      }
 
       .rrssb-text {
         color: $rrssb-txt;
-      }
+        }
 
       &:active {
         box-shadow: inset 1px 3px 15px 0 rgba(22, 0, 0, .25);
+        }
       }
-    }
 
     &.small {
       a {
@@ -158,14 +158,14 @@ $social-list: (rrssb-email $rrssb-email, rrssb-facebook $rrssb-facebook, rrssb-t
           position: relative;
           top: auto;
           width: 100%;
-        }
+          }
 
         .rrssb-text {
           visibility: hidden;
+          }
         }
       }
     }
-  }
 
   &.large-format {
     height: auto;
@@ -189,15 +189,15 @@ $social-list: (rrssb-email $rrssb-email, rrssb-facebook $rrssb-facebook, rrssb-t
             position: absolute;
             top: 0;
             width: 100%;
+            }
           }
-        }
 
         .rrssb-text {
           backface-visibility: hidden;
+          }
         }
       }
     }
-  }
 
   &.small-format {
     padding-top: 5px;
@@ -216,11 +216,11 @@ $social-list: (rrssb-email $rrssb-email, rrssb-facebook $rrssb-facebook, rrssb-t
             position: relative;
             top: 6px;
             width: 80%;
+            }
           }
         }
       }
     }
-  }
 
   &.tiny-format {
     height: 22px;
@@ -239,39 +239,55 @@ $social-list: (rrssb-email $rrssb-email, rrssb-facebook $rrssb-facebook, rrssb-t
           svg {
             height: 70%;
             width: 100%;
+            }
           }
-        }
 
         &:hover,
         &:active {
           background-color: transparent;
+          }
         }
-      }
 
       // This generates individual button classes for each item in social list on line 39.
       @each $s-name in $social-list {
-        &.#{nth($s-name, 1)} {
+        &.#{nth($s-name, 1) } {
           a {
             .rrssb-icon {
               svg {
                 path {
                   fill: nth($s-name, 2);
+                  }
                 }
-              }
 
               &:hover {
                 .rrssb-icon {
                   svg {
                     path {
                       fill: darken(nth($s-name, 2), 20%);
+                      }
                     }
                   }
                 }
               }
             }
           }
-        }
-      } // end @each directive
+        } // end @each directive
+      }
     }
   }
-}
+
+
+
+  // .rssb-buttons {
+  //   list-style:none;
+  //   li {
+  //   list-style:none;      
+  //     a {
+  //       padding: 0.5rem;
+  //       text-decoration: none;
+  //       color: white;
+  //       display:block;
+  //       margin-bottom: 0.5em;
+  //        }
+  //      }
+  //    }

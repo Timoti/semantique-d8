@@ -9,7 +9,7 @@
 
 	.footer-floor {
 
-		background-color: $col-brand-1; 
+		background-color: $col-brand-3; 
 		min-height: 10rem; // magicmumber	
 		padding: 6rem 0 3rem 0;
 		// a:link,
@@ -131,6 +131,7 @@
 	> * {
 		display: block;
 		margin-bottom: $global-gutter*2;
+		font-size: $small-font-size;
 		}
 
 	.logo-partner {
@@ -145,3 +146,15 @@
 
 
 
+.footer-floor .menu li {
+	display: block;
+	margin-bottom: $global-padding;
+	a {
+		padding: 0;
+		}
+}
+
+.footer-floor .button {
+	@include button-hollow;
+	@include btn-compact;
+}

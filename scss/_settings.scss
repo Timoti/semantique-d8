@@ -83,32 +83,32 @@
 
 // BRANDED FONT
 
-@font-face{ 
-	font-family: 'goethegothic-webfont';
-	src: url('../fonts/goethegothic-webfont.eot');
-	src: url('../fonts/goethegothic-webfont.eot?#iefix') format('embedded-opentype'),
-			 url('../fonts/goethegothic-webfont.woff') format('woff'),
-			 url('../fonts/goethegothic-webfont.ttf') format('truetype'),
-			 url('../fonts/goethegothic-webfont.svg#webfont') format('svg');
-			}
+// @font-face{ 
+// 	font-family: 'goethegothic-webfont';
+// 	src: url('../fonts/goethegothic-webfont.eot');
+// 	src: url('../fonts/goethegothic-webfont.eot?#iefix') format('embedded-opentype'),
+// 			 url('../fonts/goethegothic-webfont.woff') format('woff'),
+// 			 url('../fonts/goethegothic-webfont.ttf') format('truetype'),
+// 			 url('../fonts/goethegothic-webfont.svg#webfont') format('svg');
+// 			}
 
-@font-face{ 
-	font-family: 'goethegothicbold-webfont';
-	src: url('../fonts/goethegothicbold-webfont.eot');
-	src: url('../fonts/goethegothicbold-webfont.eot?#iefix') format('embedded-opentype'),
-			 url('../fonts/goethegothicbold-webfont.woff') format('woff'),
-			 url('../fonts/goethegothicbold-webfont.ttf') format('truetype'),
-			 url('../fonts/goethegothicbold-webfont.svg#webfont') format('svg');
-			}
+// @font-face{ 
+// 	font-family: 'goethegothicbold-webfont';
+// 	src: url('../fonts/goethegothicbold-webfont.eot');
+// 	src: url('../fonts/goethegothicbold-webfont.eot?#iefix') format('embedded-opentype'),
+// 			 url('../fonts/goethegothicbold-webfont.woff') format('woff'),
+// 			 url('../fonts/goethegothicbold-webfont.ttf') format('truetype'),
+// 			 url('../fonts/goethegothicbold-webfont.svg#webfont') format('svg');
+// 			}
 
-@font-face{ 
-	font-family: 'goethegothicoblique-webfont';
-	src: url('../fonts/goethegothicoblique-webfont.eot');
-	src: url('../fonts/goethegothicoblique-webfont.eot?#iefix') format('embedded-opentype'),
-			 url('../fonts/goethegothicoblique-webfont.woff') format('woff'),
-			 url('../fonts/goethegothicoblique-webfont.ttf') format('truetype'),
-			 url('../fonts/goethegothicoblique-webfont.svg#webfont') format('svg');
-			}
+// @font-face{ 
+// 	font-family: 'goethegothicoblique-webfont';
+// 	src: url('../fonts/goethegothicoblique-webfont.eot');
+// 	src: url('../fonts/goethegothicoblique-webfont.eot?#iefix') format('embedded-opentype'),
+// 			 url('../fonts/goethegothicoblique-webfont.woff') format('woff'),
+// 			 url('../fonts/goethegothicoblique-webfont.ttf') format('truetype'),
+// 			 url('../fonts/goethegothicoblique-webfont.svg#webfont') format('svg');
+// 			}
 
 
 // purple 
@@ -119,20 +119,14 @@
 // COLOURS
 $outer-space: rgb(7, 78, 104);   // to be integrated
 $col-black: #0a0a0a; //black
-$col-white: #fefefe; //white #EAE5E0;
+$col-white: #FCFCF1; //white #EAE5E0;
 
 
 // $col-brand-1: #961471; //plum
 
-$col-brand-1: darkGray; //dark gray
-// $col-brand-1: #A6143D; //wine panel
-// $col-brand-2: #40054B; //purple DARK
-// $col-brand-2: #460062; //purple DARK
-// $col-brand-2: #580E20; //wine dark
-// $col-brand-3: #D46A86;  // wine light
-
-$col-brand-2: gray; //gray
-$col-brand-4: lightGray;  // for reverse out
+$col-brand-1: #00935F; //green
+$col-brand-2: #3C61AD; //blue
+$col-brand-3: #857C7F; // gray
 
 
 
@@ -144,33 +138,6 @@ $col-white-trans-3: rgba($col-white, 0.3);
 $col-white-trans-1: rgba($col-white, 0.1);
 
 
-
-
-
-
-
-
-
-// PACKAGE  COLOURS
-
-// backgrounds
-$col-pkg-1: #E5FDAA;
-$col-pkg-2: #CBF176;
-$col-pkg-3: #5D850D;
-$col-pkg-4: #D0FDB4;
-$col-pkg-5: #9CE27C;
-$col-pkg-6: #20850C;
-$col-pkg-7: #CDF9D4;
-$col-pkg-8: #82EBAB;
-$col-pkg-9: #127958;
-
-// text
-$col-pkg-text-A: #225C06; // Dark Green
-$col-pkg-text-B: #1B4805; // V Dark Green
-$col-pkg-text-C: $col-white;
-
-
-
 $foundation-palette: (
 	primary: #1779ba,
 	secondary: #767676,
@@ -179,15 +146,7 @@ $foundation-palette: (
 	alert: #cc4b37,
 	);
 
-
-
-// GGB SPECIFIC
-//$col-action: #097F52; // dark turquoise //GGB
-$col-action: $col-brand-1;
-$col-action-hvr: lighten($col-action, 10%);
-
 @include add-foundation-colors;
-
 
 // convert back to map!
 $primary-color: $col-brand-1; 
@@ -197,6 +156,7 @@ $secondary-color: #cacaca;
 // $success-color: #3adb76;
 // $warning-color: #ffae00;
 // $alert-color: #ec5840;
+
 
 // consider folding back to base
 $col-gray-light: #e6e6e6;
@@ -208,27 +168,30 @@ $medium-gray: $col-gray-medium;
 $dark-gray: $col-gray-dark;
 $black: $col-black;
 $white: $col-white;
-$body-background: $col-white-off;
+$body-background: $col-white;
 $body-font-color: $col-black;
 
 $col-rev-background: $col-black;
 $global-color-pick-contrast-tolerance: 0;
 $print-transparent-backgrounds: true;
 
-//optional
-$col-brand-1-bkg: lighten($col-brand-1, 30%);
-$col-brand-2-bkg: lighten($col-brand-2, 30%);
-$col-brand-3-bkg: lighten($col-brand-3, 30%);
+// TINTS
+$col-brand-1-tint: lighten($col-brand-1, 15%);
+$col-brand-2-tint: lighten($col-brand-2, 15%);
+$col-brand-3-tint: lighten($col-brand-3, 15%);
 
-$col-anchor:  #8F79BE; // violet
-$col-anchor-rev:  lighten($col-brand-1, 50%);
+
+
+
+$col-anchor:  $col-brand-2; // blue
+$col-anchor-rev:  lighten($col-brand-2, 70%);
 //$anchor-color: darken($col-brand-2,10%);
 //
 // TYPE
 $global-font-size: 100%;
 $global-lineheight: 1.45;
 $compact-lineheight: 1.25;
-$body-font-family: goethegothic-webfont, Roboto, Arial, sans-serif;
+$body-font-family: Montserrat, sans-serif;
 $body-antialiased: true;
 $global-weight-normal: normal;
 $global-weight-bold: bold;
@@ -274,12 +237,12 @@ $breakpoints: (
 	smallish: 500px,
 	mediumish: 600px,	
 	medium: 768px,
-	largish: 850px,
+	largeish: 850px,
 	large: 960px,
 	xlarge: 1200px,
 );
 
-$breakpoint-classes: (tiny small smallish medium mediumish largish large xlarge);
+$breakpoint-classes: (tiny small smallish medium mediumish largeish large xlarge);
 
 
 // LEGACY SPACINGS
@@ -304,12 +267,19 @@ $container-max-width: 63em;
 // See cssgrid grid-context mixin for basic grid setups
 // in Global Frameworks 
 
+
+
+
+
+
+
+
 // 4. Base Typography
 // ------------------
 
-@import url('https://fonts.googleapis.com/css?family=Sintony');
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Montserrat+Subrayada');
 
-$header-font-family: $body-font-family;
+$header-font-family: 'Montserrat Subrayada', Montserrat, sans-serif;
 $header-font-weight: $global-weight-normal;
 $header-font-style: normal;
 $font-family-monospace: Consolas, 'Liberation Mono', Courier, monospace;
@@ -1064,6 +1034,7 @@ $border-plain-light: dotted $col-gray-dark 1px;
 $border-plain-medium: dotted $col-gray-medium 1px;
 $border-plain-dark: dotted $col-gray-dark 1px;
 
+$border-heavy-dark: solid $col-brand-3 8px;
 
 // 102. Superfish Menu
 // -------------------
@@ -1216,16 +1187,6 @@ $xlarge-font-size: 2rem;
 // ---------------------------------------
 
 
-@mixin alternating-bkgs {
-	&:nth-child(odd) {
-	background: linear-gradient(45deg, rgba(240,240,240,1) 0%, rgba(143,143,143,1) 100%); /* w3c */
-	}
-&:nth-child(even) {
-background:radial-gradient(ellipse at center, rgba(237,237,237,1) 0%, rgba(237,237,237,1) 1%, rgba(224,224,224,1) 46%, rgba(196,196,196,1) 78%, rgba(145,145,145,1) 100%);
-		}
-	}
-
-
 @mixin floor-fade-top ($opacity: 0.8, $height:60%) {
 	width: 100%;
 	height:$height;
@@ -1233,28 +1194,8 @@ background:radial-gradient(ellipse at center, rgba(237,237,237,1) 0%, rgba(237,2
 	background-image: linear-gradient(to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, $opacity) );
 	}
 
-@mixin planner-field-wrap {
-	margin: 0 $plan-field-padding $plan-field-padding $plan-field-padding;
-	padding-top: $plan-field-padding;		//min-height: 20rem;
-	// padding: $plan-field-padding;
-	}
 
 
-@mixin card-vanillarize {
-	background: none;
-	&:hover {
-		// counteract form hover state
-		background: inherit;
-		}			
-	border: $border-plain-dark;
-	color: $body-font-color;
-	.description,
-	.better-descriptions.better-descriptions,
-	.label {
-		color: inherit;
-		}
-	}
-				
 
 // $col-light: $col-white,
 // $col-impact: $col-brand-1,
